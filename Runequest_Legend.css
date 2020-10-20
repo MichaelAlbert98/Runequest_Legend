@@ -688,8 +688,8 @@ td.sheet-effect_mp_cost {
 }
 .sheet-rolltemplate-runequest caption {
   text-align: center;
-  background: url(http://i.imgur.com/VnqY9Kh.png);
-  color: #F59111;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
   font-weight: bold;
   padding: 2px;
   border: 1px solid black;
@@ -729,8 +729,8 @@ td.sheet-effect_mp_cost {
 }
 .sheet-rolltemplate-runequest-weapon caption {
   text-align: center;
-  background: url(http://i.imgur.com/VnqY9Kh.png);
-  color: #F59111;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
   font-weight: bold;
   padding: 2px;
   border: 1px solid black;
@@ -758,6 +758,46 @@ td.sheet-effect_mp_cost {
   background: #BEBEBE;
 }
 .sheet-rolltemplate-runequest-weapon .inlinerollresult.importantroll {
+  border: 1px solid black;
+  background: #BEBEBE;
+}
+.sheet-rolltemplate-runequest-init table {
+  width: 100%;
+  border: 1px solid black;
+  color: black;
+  background: #FFFFFF;
+}
+.sheet-rolltemplate-runequest-init caption {
+  text-align: center;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
+  font-weight: bold;
+  padding: 2px;
+  border: 1px solid black;
+  line-height: 1.5em;
+}
+.sheet-rolltemplate-runequest-init td {
+  padding: 2px;
+  border-bottom: 1px solid black;
+}
+.sheet-rolltemplate-runequest-init td.sheet-template_value {
+  text-align: center;
+}
+.sheet-rolltemplate-runequest-init .inlinerollresult  {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  background: #BEBEBE;
+}
+.sheet-rolltemplate-runequest-init .inlinerollresult.fullcrit {
+  border: 1px solid black;
+  background: #BEBEBE;
+}
+.sheet-rolltemplate-runequest-init .inlinerollresult.fullfail {
+  border: 1px solid black;
+  background: #BEBEBE;
+}
+.sheet-rolltemplate-runequest-init .inlinerollresult.importantroll {
   border: 1px solid black;
   background: #BEBEBE;
 }
