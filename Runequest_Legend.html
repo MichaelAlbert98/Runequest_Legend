@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class='column-3of3'>
-            <img src="https://www.mongoosepublishing.com/pub/media/catalog/category/Legend_front.jpg">
+            <img src="https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Legend_front.jpg">
             <span style="display: block; margin-bottom: 2px;"></span>
         </div>
     </div>
@@ -168,7 +168,7 @@
                             </tr>
                             <tr>
                                 <td class="char-label">INIT: </td>
-                                <td><button type='roll' name="roll_check" value="[[ 1d10 + @{strike_rank} &{tracker} ]]"></td>
+                                <td><button type='roll' name="roll_check" value="&{template:runequest-init} {{name=Initiative}} {{rolled=[[ 1d10 + @{strike_rank} &{tracker} ]]}}"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -1623,6 +1623,16 @@
             {{/rollGreater() rolled 98}}
             {{/rollLess() very_easy 101}}
             {{/rollGreater() rolled 95}}
+        </tr>
+    </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-runequest-init">
+    <table>
+        <caption>{{name}}</caption>
+        <tr style="background:#DFF0D8;">
+            <td class="template_label">Roll:</td>
+            <td class="template_value">{{rolled}}</td>
         </tr>
     </table>
 </rolltemplate>
