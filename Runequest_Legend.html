@@ -654,7 +654,7 @@
                     </tr>
                     <tr>
                         <td class="shield"><input class="full" type="text" name="attr_shield"/></td>
-                        <td class="shield_damage"><input class="damage" type="text" name="attr_shield_damage"/><select class="db" disabled><option selected>+db</option></select><button type="roll" name="roll_shield_damage_check" value="&{template:runequest} {{name=@{shield}}} {{damage=@{shield_damage}+@{damage_mod}}} {{rolled=[[@{shield_damage}+@{damage_mod}]]}} {{size=@{shield_size}}} {{effects=@{shield_effects}}}"/></td>
+                        <td class="shield_damage"><input class="damage" type="text" name="attr_shield_damage"/><select class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_shield_damage_check" value="&{template:runequest-weapon} {{name=@{shield}}} {{damage=[[@{shield_damage}+@{damage_mod}]]}} {{size/reach=@{shield_size}/@{shield_reach}}} {{effects=@{shield_effects}}}"/></td>
                         <td class="shield_size"><input class="value_full" type="text" name="attr_shield_size"/></td>
                         <td class="shield_reach"><input class="value_full" type="text" name="attr_shield_reach"/></td>
                         <td class="shield_enc"><input class="value_full" type="number" name="attr_shield_enc" value="0"/></td>
