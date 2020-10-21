@@ -295,6 +295,7 @@ table.sheet-combat_styles {
 }
 td.sheet-cs_style {
     width: 16%;
+    text-align: left;
 }
 td.sheet-cs_calc {
     white-space: nowrap;
@@ -320,43 +321,6 @@ td.sheet-cs_benifits {
 }
 
 /* Shields and Weapons */
-td.sheet-shield {
-    width: 15%;
-    text-align: center;
-}
-td.sheet-shield_damage {
-    width: 17%;
-    text-align: center;
-}
-td.sheet-shield_size {
-    width: 4%;
-    text-align: center;
-}
-td.sheet-shield_reach {
-    width: 4%;
-    text-align: center;
-}
-td.sheet-shield_enc {
-    width: 4%;
-    text-align: center;
-}
-td.sheet-shield_ap {
-    width: 10%;
-    text-align: center;
-}
-td.sheet-shield_hp {
-    width: 10%;
-    text-align: center;
-}
-td.sheet-shield_effects {
-    width: 15%;
-    text-align: center;
-}
-td.sheet-shield_blocks {
-    width: 20%;
-    text-align: center;
-}
-
 td.sheet-weapon {
     width: 15%;
     text-align: center;
@@ -583,7 +547,7 @@ td.sheet-sorcery_symbol {
     width: 2%;
 }
 td.sheet-sorcery_roll {
-    width: 9%;
+    width: 10%;
     text-align: center;
 }
 td.sheet-sorcery_intensity {
@@ -677,7 +641,6 @@ td.sheet-effect_desc {
 td.sheet-effect_mp_cost {
     width: 8%;
 }
-
 
 /* Roll Templates */
 .sheet-rolltemplate-runequest table {
