@@ -65,6 +65,13 @@
                 <div class="section">
                     <h3>Characteristics & Traits</h3>
                     <div class="characteristic-column">
+                        <input type="hidden" name="attr_hidden_str" value="0" />
+                        <input type="hidden" name="attr_hidden_int" value="0" />
+                        <input type="hidden" name="attr_hidden_con" value="0" />
+                        <input type="hidden" name="attr_hidden_pow" value="0" />
+                        <input type="hidden" name="attr_hidden_siz" value="0" />
+                        <input type="hidden" name="attr_hidden_cha" value="0" />
+                        <input type="hidden" name="attr_hidden_dex" value="0" />
                         <table class="char">
                             <tr>
                                 <td></td>
@@ -76,19 +83,19 @@
                             </tr>
                             <tr>
                                 <td class="char-label">STR: </td>
-                                <td><input type="text" class="value" name="attr_str_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_str_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_str_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_str_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_str" value="(@{str_std}+@{str_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_str" value="@{hidden_str}"disabled></td>
                             </tr>
                             <tr>
                                 <td class="char-label">INT: </td>
-                                <td><input type="text" class="value" name="attr_int_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_int_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_int_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_int_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_int" value="(@{int_std}+@{int_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_int" value="@{hidden_int}"disabled></td>
                             </tr>
                         </table>
                     </div>
@@ -104,19 +111,19 @@
                             </tr>
                             <tr>
                                 <td class="char-label">CON: </td>
-                                <td><input type="text" class="value" name="attr_con_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_con_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_con_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_con_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_con" value="(@{con_std}+@{con_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_con" value="@{hidden_con}"disabled></td>
                             </tr>
                             <tr>
                                 <td class="char-label">POW: </td>
-                                <td><input type="text" class="value" name="attr_pow_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_pow_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_pow_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_pow_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_pow" value="(@{pow_std}+@{pow_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_pow" value="@{hidden_pow}"disabled></td>
                             </tr>
                         </table>
                     </div>
@@ -132,19 +139,19 @@
                             </tr>
                             <tr>
                                 <td class="char-label">SIZ: </td>
-                                <td><input type="text" class="value" name="attr_siz_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_siz_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_siz_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_siz_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_siz" value="(@{siz_std}+@{siz_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_siz" value="@{hidden_siz}"disabled></td>
                             </tr>
                             <tr>
                                 <td class="char-label">CHA: </td>
-                                <td><input type="text" class="value" name="attr_cha_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_cha_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_cha_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_cha_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_cha" value="(@{cha_std}+@{cha_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_cha" value="@{hidden_cha}"disabled></td>
                             </tr>
                         </table>
                     </div>
@@ -160,11 +167,11 @@
                             </tr>
                             <tr>
                                 <td class="char-label">DEX: </td>
-                                <td><input type="text" class="value" name="attr_dex_std" value="10"></td>
+                                <td><input type="number" class="value" name="attr_dex_std" value="10"></td>
                                 <td>+</td>
-                                <td><input type="text" class="value" name="attr_dex_temp" value="0"></td>
+                                <td><input type="number" class="value" name="attr_dex_temp" value="0"></td>
                                 <td>=</td>
-                                <td><input type="number" class="total" name="attr_dex" value="(@{dex_std}+@{dex_temp})" disabled></td>
+                                <td><input type="number" class="total" name="attr_dex" value="@{hidden_dex}"disabled></td>
                             </tr>
                             <tr>
                                 <td class="char-label">INIT: </td>
@@ -190,7 +197,7 @@
                     <table class="full">
                         <tr>
                             <td style="white-space: nowrap"><h3>Hit Locations & Armor</h3></td>
-                            <td style="width: 100%; text-align: right;"><h5 style="display: inline">Armor Penalty: </h5><input type="number" class="value" name="attr_armor_penalty" value="-ceil((@{hitloc1_ap}+@{hitloc2_ap}+@{hitloc3_ap}+@{hitloc4_ap}+@{hitloc5_ap}+@{hitloc6_ap}+@{hitloc7_ap})/5)" disabled/></td>
+                            <td style="width: 100%; text-align: right;"><h5 style="display: inline">Armor Penalty: </h5><input type="number" class="value" name="attr_armor_penalty" value="-ceil((@{hitloc1_apmax}+@{hitloc2_apmax}+@{hitloc3_apmax}+@{hitloc4_apmax}+@{hitloc5_apmax}+@{hitloc6_apmax}+@{hitloc7_apmax})/5)" disabled/></td>
                         </tr>
                     </table>
                     <table class="full">
@@ -206,10 +213,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc1_roll" value="1-3"/></td>
                             <td><input class="full" type="text" name="attr_hitloc1" value="Right Leg"/></td>
                             <td><input class="full" type="text" name="attr_hitloc1_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc1_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc1_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc1_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc1_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc1_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc1_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc1_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
@@ -218,10 +225,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc2_roll" value="4-6"/></td>
                             <td><input class="full" type="text" name="attr_hitloc2" value="Left Leg"/></td>
                             <td><input class="full" type="text" name="attr_hitloc2_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc2_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc2_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc2_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc2_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc2_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc2_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc2_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
@@ -230,10 +237,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc3_roll" value="7-9"/></td>
                             <td><input class="full" type="text" name="attr_hitloc3" value="Abdomen"/></td>
                             <td><input class="full" type="text" name="attr_hitloc3_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc3_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc3_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc3_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc3_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc3_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc3_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc3_hp_max" value="(ceil((@{con}+@{siz})/5)+1)" disabled/></td>
@@ -242,10 +249,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc4_roll" value="10-12"/></td>
                             <td><input class="full" type="text" name="attr_hitloc4" value="Chest"/></td>
                             <td><input class="full" type="text" name="attr_hitloc4_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc4_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc4_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc4_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc4_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc4_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc4_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc4_hp_max" value="(ceil((@{con}+@{siz})/5)+2)" disabled/></td>
@@ -254,10 +261,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc5_roll" value="13-15"/></td>
                             <td><input class="full" type="text" name="attr_hitloc5" value="Right Arm"/></td>
                             <td><input class="full" type="text" name="attr_hitloc5_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc5_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc5_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc5_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc5_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc5_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc5_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc5_hp_max" value="ceil((@{con}+@{siz}-5)/5)" disabled/></td>
@@ -266,10 +273,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc6_roll" value="16-18"/></td>
                             <td><input class="full" type="text" name="attr_hitloc6" value="Left Arm"/></td>
                             <td><input class="full" type="text" name="attr_hitloc6_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc6_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc6_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc6_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc6_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc6_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc6_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc6_hp_max" value="ceil((@{con}+@{siz}-5)/5)" disabled/></td>
@@ -278,10 +285,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc7_roll" value="19-20"/></td>
                             <td><input class="full" type="text" name="attr_hitloc7" value="Head"/></td>
                             <td><input class="full" type="text" name="attr_hitloc7_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc7_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc7_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc7_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc7_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc7_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc7_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="number" name="attr_hitloc7_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
@@ -290,10 +297,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc8_roll"/></td>
                             <td><input class="full" type="text" name="attr_hitloc8"/></td>
                             <td><input class="full" type="text" name="attr_hitloc8_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc8_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc8_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc8_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc8_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc8_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc8_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="text" name="attr_hitloc8_hp_max"/></td>
@@ -302,10 +309,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc9_roll"/></td>
                             <td><input class="full" type="text" name="attr_hitloc9"/></td>
                             <td><input class="full" type="text" name="attr_hitloc9_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc9_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc9_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc9_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc9_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc9_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc9_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="text" name="attr_hitloc9_hp_max"/></td>
@@ -314,10 +321,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc10_roll"/></td>
                             <td><input class="full" type="text" name="attr_hitloc10"/></td>
                             <td><input class="full" type="text" name="attr_hitloc10_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc10_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc10_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc10_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc10_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc10_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc10_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="text" name="attr_hitloc10_hp_max"/></td>
@@ -326,10 +333,10 @@
                             <td><input class="value_full" type="text" name="attr_hitloc11_roll"/></td>
                             <td><input class="full" type="text" name="attr_hitloc11"/></td>
                             <td><input class="full" type="text" name="attr_hitloc11_armor"/></td>
-                            <td><input class="value" type="text" name="attr_hitloc11_enc" value="0"/></td>
+                            <td><input class="value" type="number" name="attr_hitloc11_enc" value="0"/></td>
                             <td><input class="value" type="text" name="attr_hitloc11_ap"/></td>
                             <td>/</td>
-                            <td><input class="value" type="text" name="attr_hitloc11_ap_max"/>
+                            <td><input class="value" type="text" name="attr_hitloc11_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc11_hp"/></td>
                             <td>/</td>
                             <td><input class="value" type="text" name="attr_hitloc11_hp_max"/></td>
@@ -351,17 +358,17 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Combat Actions: </td>
-                            <td><input type="number" class="value" name="attr_action_points_std" value="ceil((@{int}+@{dex}+@{fatigue_action_points})/12)" /></td>
+                            <td><input type="number" class="value" name="attr_action_points_std" value="ceil((@{int}+@{dex}+@{fatigue_action_points})/12)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_action_points_temp" value="0"/></td>
                             <td>=</td>
                             <td><input type="text" class="attribute-current" name="attr_action_points"/></td>
                             <td>/</td>
-                            <td><input type="number" class="total" name="attr_action_points_max" value="((ceil((@{int}+@{dex}+@{fatigue_action_points})/12)+@{action_points_temp}))" disabled/></td>
+                            <td><input type="number" class="total" name="attr_action_points_max" value="(@{action_points_std}+@{action_points_temp})" disabled/></td>
                         </tr>
                         <tr>
                             <td class="attribute-label">Magic Points: </td>
-                            <td><input type="number" class="value" name="attr_magic_points_std" value="@{pow}" /></td>
+                            <td><input type="number" class="value" name="attr_magic_points_std" value="@{pow}" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_magic_points_temp" value="0"/></td>
                             <td>=</td>
@@ -371,7 +378,7 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Move Rate: </td>
-                            <td><input type="text" class="value" name="attr_movement_rate_std" value="" /></td>
+                            <td><input type="text" class="value" name="attr_movement_rate_std" value="8" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_movement_rate_temp" value="0"/></td>
                             <td>=</td>
@@ -380,7 +387,7 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Strike Rank: </td>
-                            <td><input type="number" class="value" name="attr_strike_rank_std" value="ceil((@{int}+@{dex})/2)" /></td>
+                            <td><input type="number" class="value" name="attr_strike_rank_std" value="ceil((@{int}+@{dex})/2)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_strike_rank_temp" value="0"/></td>
                             <td>=</td>
@@ -389,7 +396,7 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Exp. Mod: </td>
-                            <td><input type="number" class="value" name="attr_experience_mod_std" value="(ceil(@{cha}/6)-2)" /></td>
+                            <td><input type="number" class="value" name="attr_experience_mod_std" value="(ceil(@{cha}/6)-2)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_experience_mod_temp" value="0"/></td>
                             <td>=</td>
@@ -405,7 +412,7 @@
                             <td></td>
                             <td></td>
                             <td>
-                                <select class="full" name="attr_damage_mod_std">
+                                <select class="full" name="attr_healing_rate">
                                     <option value="72">72</option>
                                     <option value="48">48</option>
                                     <option value="36">36</option>
@@ -521,7 +528,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <select class="full" name="attr_fatigue_skillgrade">
+                                <select class="full" name="attr_fatigue_skillgrade" >
                                     <option value=+0 selected>Standard</option>
                                     <option value=-10>-10%</option>
                                     <option value=-20>-20%</option>
@@ -563,7 +570,7 @@
                 <h3>Combat Styles</h3>
                 <table class="full_fixed">
                     <tr class="head">
-                        <td class="cs_style"><h5>Style</h5></td>
+                        <td class="cs_style"><h5>Melee Styles</h5></td>
                         <td class="cs_calc"><h5>Base+Points+Augment</h5></td>
                         <td class="cs_symbol"><h5>=</h5></td>
                         <td class="cs_number"><h5>%</h5></td>
@@ -574,7 +581,7 @@
                 </table>
                 <table class="full_fixed">
                     <tr>
-                        <td class="cs_style">Unarmed</td>
+                        <td class="cs_style"><input class="full" type="text" name="attr_unarmed_name" value="Unarmed" disabled="true"></td>
                         <td class="cs_calc">STR+DEX+<input class="value" type="text" name="attr_unarmed_cs_points" value="@{unarmed_points}" disabled="true">+<input class="value" type="text" name="attr_unarmed_cs_temp" value="@{unarmed_temp}" disabled="true"></td>
                         <td class="cs_symbol">=</td>
                         <td class="cs_number"><input class="total" type="number" name="attr_unarmed_cs_total" value="(@{str}+@{dex}+@{unarmed_points}+@{unarmed_temp})" disabled="true"></td>
@@ -584,18 +591,18 @@
                         <td class="cs_benefits"><input class="full" type="text" name="attr_unarmed_cs_benefits"></td>
                     </tr>
                 </table>
-                <table class="full_fixed">
+                <!--<table class="full_fixed">
                     <tr>
                         <td class="cs_style"><input class="full" type="text" name="attr_combat_style1_name"></td>
                         <td class="cs_calc">STR+DEX+<input class="value" type="text" name="attr_combat_style1_points" value="0">+<input class="value" type="text" name="attr_combat_style1_temp" value="0"></td>
                         <td class="cs_symbol">=</td>
                         <td class="cs_number"><input class="total" type="number" name="attr_combat_style1_total" value="(@{str}+@{dex}+@{combat_style1_points}+@{combat_style1_temp})" disabled="true"></td>
                         <td class="cs_roll"><button type='roll' name="roll_combat_style1_check" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[@{combat_style1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_combat_style1_check_penalized" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[ @{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <button type='roll' name="roll_combat_style1_check_penalized" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[ @{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="cs_weapons"><input class="full" type="text" name="attr_combat_style1_weapons"></td>
                         <td class="cs_benefits"><input class="full" type="text" name="attr_combat_style1_benefits"></td>
                     </tr>
-                </table>
+                </table> -->
                 <fieldset class="repeating_meleestyles">
                     <table class="full_fixed">
                         <tr>
@@ -610,18 +617,19 @@
                         </tr>
                     </table>
                 </fieldset>
-                <table class="full_fixed">
+                <!--<table class="full_fixed">
                     <tr>
                         <td class="cs_style"><input class="full" type="text" name="attr_combat_style2_name"></td>
                         <td class="cs_calc">DEXx2+<input class="value" type="text" name="attr_combat_style2_points" value="0">+<input class="value" type="text" name="attr_combat_style2_temp" value="0"></td>
                         <td class="cs_symbol">=</td>
                         <td class="cs_number"><input class="total" type="number" name="attr_combat_style2_total" value="(@{dex}+@{dex}+@{combat_style1_points}+@{combat_style2_temp})" disabled="true"></td>
                         <td class="cs_roll"><button type='roll' name="roll_combat_style2_check" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[@{combat_style2_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style2_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_combat_style2_check_penalized" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[ @{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <button type='roll' name="roll_combat_style2_check_penalized" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[ @{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="cs_weapons"><input class="full" type="text" name="attr_combat_style1_weapons"></td>
                         <td class="cs_benefits"><input class="full" type="text" name="attr_combat_style1_benefits"></td>
                     </tr>
-                </table>
+                </table>-->
+                <h5>Ranged Styles</h5>
                 <fieldset class="repeating_rangestyles">
                     <table class="full_fixed">
                         <tr>
@@ -642,30 +650,6 @@
                 <h3>Shields & Weapons</h3>
                 <table class="full_fixed">
                     <tr class="head">
-                        <td class="shield"><h5>Shield</h5></td>
-                        <td class="shield_damage"><h5>Damage</h5></td>
-                        <td class="shield_size"><h5>Size</h5></td>
-                        <td class="shield_reach"><h5>Reach</h5></td>
-                        <td class="shield_enc"><h5>ENC</h5></td>
-                        <td class="shield_ap"><h5>AP</h5></td>
-                        <td class="shield_hp"><h5>HP</h5></td>
-                        <td class="shield_effects"><h5>Effects</h5></td>
-                        <td class="shield_blocks"><h5>Blocks</h5></td>
-                    </tr>
-                    <tr>
-                        <td class="shield"><input class="full" type="text" name="attr_shield"/></td>
-                        <td class="shield_damage"><input class="damage" type="text" name="attr_shield_damage"/><select class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_shield_damage_check" value="&{template:runequest-weapon} {{name=@{shield}}} {{damage=[[@{shield_damage}+@{damage_mod}]]}} {{size/reach=@{shield_size}/@{shield_reach}}} {{effects=@{shield_effects}}}"/></td>
-                        <td class="shield_size"><input class="value_full" type="text" name="attr_shield_size"/></td>
-                        <td class="shield_reach"><input class="value_full" type="text" name="attr_shield_reach"/></td>
-                        <td class="shield_enc"><input class="value_full" type="number" name="attr_shield_enc" value="0"/></td>
-                        <td class="shield_ap"><input class="value" type="number" name="attr_shield_ap"/>/<input class="value" type="number" name="attr_shield_ap_max"/></td>
-                        <td class="shield_hp"><input class="value" type="number" name="attr_shield_hp"/>/<input class="value" type="number" name="attr_shield_hp_max"/></td>
-                        <td class="shield_effects"><input class="value_full" type="text" name="attr_shield_effects"/></td>
-                        <td class="shield_blocks"><input class="value_full" type="number" name="attr_shieldblocks"/></td>
-                    </tr>
-                </table>
-                <table class="full_fixed">
-                    <tr class="head">
                         <td class="weapon"><h5>Weapon</h5></td>
                         <td class="weapon_damage"><h5>Damage</h5></td>
                         <td class="weapon_size"><h5>Size</h5></td>
@@ -673,98 +657,25 @@
                         <td class="weapon_enc"><h5>ENC</h5></td>
                         <td class="weapon_ap"><h5>AP</h5></td>
                         <td class="weapon_hp"><h5>HP</h5></td>
-                        <td class="weapon_effects"><h5>Effects</h5></td>
+                        <td class="weapon_manoeuvres"><h5>Manoeuvres</h5></td>
                         <td class="weapon_load"><h5>Load</h5></td>
                     </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon1_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon1_damage"/><select name="attr_weapon1_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon1_damage_check" value="&{template:runequest-weapon} {{name=@{weapon1_name}}} {{damage=[[@{weapon1_damage}+@{weapon1_db}]]}} {{size/reach=@{weapon1_size}/@{weapon1_reach}}} {{effects=@{weapon1_effects}}}"/></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon1_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon1_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon1_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon1_ap"/>/<input class="value" type="number" name="attr_weapon1_hp_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon1_hp"/>/<input class="value" type="number" name="attr_weapon1_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon1_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon1_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon2_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon2_damage"/><select name="attr_weapon2_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon2_damage_check" value="&{template:runequest-weapon} {{name=@{weapon2_name}}} {{damage=[[@{weapon2_damage}+@{weapon2_db}]]}} {{size/reach=@{weapon2_size}/@{weapon1_reach}}} {{effects=@{weapon2_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon2_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon2_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon2_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon2_ap"/>/<input class="value" type="number" name="attr_weapon2_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon2_hp"/>/<input class="value" type="number" name="attr_weapon2_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon2_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon2_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon3_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon3_damage"/><select name="attr_weapon3_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon3_damage_check" value="&{template:runequest-weapon} {{name=@{weapon3_name}}} {{damage=[[@{weapon3_damage}+@{weapon3_db}]]}} {{size/reach=@{weapon3_size}/@{weapon1_reach}}} {{effects=@{weapon3_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon3_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon3_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon3_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon3_ap"/>/<input class="value" type="number" name="attr_weapon3_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon3_hp"/>/<input class="value" type="number" name="attr_weapon3_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon3_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon3_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon4_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon4_damage"/><select name="attr_weapon4_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon4_damage_check" value="&{template:runequest-weapon} {{name=@{weapon4_name}}} {{damage=[[@{weapon4_damage}+@{weapon4_db}]]}} {{size/reach=@{weapon4_size}/@{weapon1_reach}}} {{effects=@{weapon4_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon4_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon4_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon4_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon4_ap"/>/<input class="value" type="number" name="attr_weapon4_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon4_hp"/>/<input class="value" type="number" name="attr_weapon4_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon4_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon4_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon5_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon5_damage"/><select name="attr_weapon5_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon5_damage_check" value="&{template:runequest-weapon} {{name=@{weapon5_name}}} {{damage=[[@{weapon5_damage}+@{weapon5_db}]]}} {{size/reach=@{weapon5_size}/@{weapon1_reach}}} {{effects=@{weapon5_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon5_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon5_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon5_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon5_ap"/>/<input class="value" type="number" name="attr_weapon5_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon5_hp"/>/<input class="value" type="number" name="attr_weapon5_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon5_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon5_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon6_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon6_damage"/><select name="attr_weapon6_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon6_damage_check" value="&{template:runequest-weapon} {{name=@{weapon6_name}}} {{damage=[[@{weapon6_damage}+@{weapon6_db}]]}} {{size/reach=@{weapon6_size}/@{weapon1_reach}}} {{effects=@{weapon6_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon6_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon6_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon6_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon6_ap"/>/<input class="value" type="number" name="attr_weapon6_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon6_hp"/>/<input class="value" type="number" name="attr_weapon6_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon6_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon6_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon7_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon7_damage"/><select name="attr_weapon7_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon7_damage_check" value="&{template:runequest-weapon} {{name=@{weapon7_name}}} {{damage=[[@{weapon7_damage}+@{weapon7_db}]]}} {{size/reach=@{weapon7_size}/@{weapon1_reach}}} {{effects=@{weapon7_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon7_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon7_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon7_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon7_ap"/>/<input class="value" type="number" name="attr_weapon7_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon7_hp"/>/<input class="value" type="number" name="attr_weapon7_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon7_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon7_load"/></td>
-                    </tr>
-                    <tr>
-                        <td class="weapon"><input class="full" type="text" name="attr_weapon8_name"/></td>
-                        <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon8_damage"/><select name="attr_weapon8_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon8_damage_check" value="&{template:runequest-weapon} {{name=@{weapon8_name}}} {{damage=[[@{weapon8_damage}+@{weapon8_db}]]}} {{size/reach=@{weapon8_size}/@{weapon1_reach}}} {{effects=@{weapon8_effects}}}" /></td>
-                        <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon8_size"/></td>
-                        <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon8_reach"/></td>
-                        <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon8_enc" value="0"/></td>
-                        <td class="weapon_ap"><input class="value" type="number" name="attr_weapon8_ap"/>/<input class="value" type="number" name="attr_weapon8_ap_max"/></td>
-                        <td class="weapon_hp"><input class="value" type="number" name="attr_weapon8_hp"/>/<input class="value" type="number" name="attr_weapon8_hp_max"/></td>
-                        <td class="weapon_effects"><input class="full" type="text" name="attr_weapon8_effects"/></td>
-                        <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon8_load"/></td>
-                    </tr>
                 </table>
+                <fieldset class="repeating_weapons">
+                    <table class="full_fixed">
+                        <tr>
+                            <td class="weapon"><input class="full" type="text" name="attr_weapon_name"/></td>
+                            <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon_damage"/><select name="attr_weapon_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon_damage_check" value="&{template:runequest-weapon} {{name=@{weapon_name}}} {{damage=[[@{weapon_damage}+@{weapon_db}]]}} {{size/reach=@{weapon_size}/@{weapon_reach}}} {{manoeuvres=@{weapon_manoeuvres}}}" /></td>
+                            <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon_size"/></td>
+                            <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon_reach"/></td>
+                            <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon_enc" value="0"/></td>
+                            <td class="weapon_ap"><input class="value" type="number" name="attr_weapon_ap"/>/<input class="value" type="number" name="attr_weapon_ap_max"/></td>
+                            <td class="weapon_hp"><input class="value" type="number" name="attr_weapon_hp"/>/<input class="value" type="number" name="attr_weapon_hp_max"/></td>
+                            <td class="weapon_manoeuvres"><input class="full" type="text" name="attr_weapon_manoeuvres"/></td>
+                            <td class="weapon_load"><input class="value_full" type="number" name="attr_weapon_load"/></td>
+                        </tr>
+                    </table>
+                </fieldset>
             </div>
         </div>
 
@@ -955,14 +866,14 @@
                             <td class="skill_roll"></td>
                         </tr>
                     </table>
-                    <table class="full_fixed">
+                    <!--<table class="full_fixed">
                         <tr>
                             <td class="profskill"><input type="text" class="full" name="attr_profskill1_name"/></td>
                             <td class="profskill_calc"><input type="text" class="skill_base" name="attr_profskill1_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_profskill1_points" value="0"/>+<input type="text" class="value" name="attr_profskill1_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
                             <td class="skill_total"><input type="number" class="total" name="attr_profskill1_total" value="(@{profskill1_base}+@{profskill1_points}+@{profskill1_temp})" disabled="true"/></td>
                             <td class="skill_roll"><button type='roll' name="roll_profskill1_check" value="&{template:runequest} {{name=@{profskill1_name}}} {{very_easy=[[@{profskill1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_profskill1_check_penalized" value="&{template:runequest} {{name=@{profskill1_name}}} {{very_easy=[[ @{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <button type='roll' name="roll_profskill1_check_penalized" value="&{template:runequest} {{name=@{profskill1_name}}} {{very_easy=[[ @{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                     </table>
                     <table class="full_fixed">
@@ -972,7 +883,7 @@
                             <td class="skill_symbol">=</td>
                             <td class="skill_total"><input type="number" class="total" name="attr_profskill2_total" value="(@{profskill2_base}+@{profskill2_points}+@{profskill2_temp})" disabled="true"/></td>
                             <td class="skill_roll"><button type='roll' name="roll_profskill2_check" value="&{template:runequest} {{name=@{profskill2_name}}} {{very_easy=[[@{profskill2_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill2_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_profskill2_check_penalized" value="&{template:runequest} {{name=@{profskill2_name}}} {{very_easy=[[ @{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <button type='roll' name="roll_profskill2_check_penalized" value="&{template:runequest} {{name=@{profskill2_name}}} {{very_easy=[[ @{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                     </table>
                     <table class="full_fixed">
@@ -982,7 +893,7 @@
                             <td class="skill_symbol">=</td>
                             <td class="skill_total"><input type="number" class="total" name="attr_profskill3_total" value="(@{profskill3_base}+@{profskill3_points}+@{profskill3_temp})" disabled="true"/></td>
                             <td class="skill_roll"><button type='roll' name="roll_profskill3_check" value="&{template:runequest} {{name=@{profskill3_name}}} {{very_easy=[[@{profskill3_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill3_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_profskill3_check_penalized" value="&{template:runequest} {{name=@{profskill3_name}}} {{very_easy=[[ @{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <button type='roll' name="roll_profskill3_check_penalized" value="&{template:runequest} {{name=@{profskill3_name}}} {{very_easy=[[ @{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                     </table>
                     <table class="full_fixed">
@@ -992,9 +903,9 @@
                             <td class="skill_symbol">=</td>
                             <td class="skill_total"><input type="number" class="total" name="attr_profskill4_total" value="(@{profskill4_base}+@{profskill4_points}+@{profskill4_temp})" disabled="true"/></td>
                             <td class="skill_roll"><button type='roll' name="roll_profskill4_check" value="&{template:runequest} {{name=@{profskill4_name}}} {{very_easy=[[@{profskill4_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill4_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_profskill4_check_penalized" value="&{template:runequest} {{name=@{profskill4_name}}} {{very_easy=[[ @{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <button type='roll' name="roll_profskill4_check_penalized" value="&{template:runequest} {{name=@{profskill4_name}}} {{very_easy=[[ @{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
-                    </table>
+                    </table>-->
                     <fieldset class="repeating_profskills">
                         <table class="full_fixed">
                             <tr>
@@ -1052,157 +963,16 @@
                             <td class="item_qnty"><h5>Qnty</h5></td>
                             <td class="item_enc"><h5>ENC per</h5></td>
                         </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item1"/></td>
-                            <td><input type="text" class="value_full" name="attr_item1_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item1_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item2"/></td>
-                            <td><input type="text" class="value_full" name="attr_item2_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item2_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item3"/></td>
-                            <td><input type="text" class="value_full" name="attr_item3_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item3_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item4"/></td>
-                            <td><input type="text" class="value_full" name="attr_item4_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item4_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item5"/></td>
-                            <td><input type="text" class="value_full" name="attr_item5_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item5_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item6"/></td>
-                            <td><input type="text" class="value_full" name="attr_item6_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item6_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item7"/></td>
-                            <td><input type="text" class="value_full" name="attr_item7_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item7_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item8"/></td>
-                            <td><input type="text" class="value_full" name="attr_item8_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item8_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item9"/></td>
-                            <td><input type="text" class="value_full" name="attr_item9_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item9_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item10"/></td>
-                            <td><input type="text" class="value_full" name="attr_item10_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item10_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item11"/></td>
-                            <td><input type="text" class="value_full" name="attr_item11_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item11_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item12"/></td>
-                            <td><input type="text" class="value_full" name="attr_item12_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item12_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item13"/></td>
-                            <td><input type="text" class="value_full" name="attr_item13_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item13_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item14"/></td>
-                            <td><input type="text" class="value_full" name="attr_item14_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item14_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item15"/></td>
-                            <td><input type="text" class="value_full" name="attr_item15_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item15_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item16"/></td>
-                            <td><input type="text" class="value_full" name="attr_item16_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item16_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item17"/></td>
-                            <td><input type="text" class="value_full" name="attr_item17_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item17_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item18"/></td>
-                            <td><input type="text" class="value_full" name="attr_item18_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item18_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item19"/></td>
-                            <td><input type="text" class="value_full" name="attr_item19_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item19_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item20"/></td>
-                            <td><input type="text" class="value_full" name="attr_item20_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item20_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item21"/></td>
-                            <td><input type="text" class="value_full" name="attr_item21_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item21_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item22"/></td>
-                            <td><input type="text" class="value_full" name="attr_item22_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item22_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item23"/></td>
-                            <td><input type="text" class="value_full" name="attr_item23_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item23_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item24"/></td>
-                            <td><input type="text" class="value_full" name="attr_item24_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item24_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item25"/></td>
-                            <td><input type="text" class="value_full" name="attr_item25_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item25_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item26"/></td>
-                            <td><input type="text" class="value_full" name="attr_item26_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item26_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item27"/></td>
-                            <td><input type="text" class="value_full" name="attr_item27_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item27_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item28"/></td>
-                            <td><input type="text" class="value_full" name="attr_item28_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item28_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item29"/></td>
-                            <td><input type="text" class="value_full" name="attr_item29_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item29_enc" value="0"/></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="full" name="attr_item30"/></td>
-                            <td><input type="text" class="value_full" name="attr_item30_qnty" value="0"/></td>
-                            <td><input type="text" class="value_full" name="attr_item30_enc" value="0"/></td>
-                        </tr>
                     </table>
+                    <fieldset class="repeating_items">
+                        <table class="full_fixed">
+                            <tr>
+                                <td class="item"><input type="text" class="full" name="attr_item"/></td>
+                                <td class="item_qnty"><input type="text" class="value_full" name="attr_item_qnty" value="0"/></td>
+                                <td class="item_enc"><input type="text" class="value_full" name="attr_item_enc" value="0"/></td>
+                            </tr>
+                        </table>
+                    </fieldset>
                 </div>
             </div>
 
@@ -1255,10 +1025,12 @@
                 </div>
                 <span style="display: block; margin-bottom: 2%;"></span>
                 <div class="section">
+                    <input type="hidden" name="attr_total_weapon_enc" value="0" />
+                    <input type="hidden" name="attr_total_item_enc" value="0" />
+                    <input type="hidden" name="attr_total_armor_enc" value="0" />
                     <table class="full">
                         <tr>
                             <td style="white-space: nowrap"><h3>Load</h3></td>
-                            <td style="width: 100%; text-align: right;"><h4 style="display: inline">Avg. Species SIZ: </h4><input type="number" class="value" name="attr_avg_species_siz" value="13"/></td>
                         </tr>
                     </table>
                     <table class="full">
@@ -1267,8 +1039,8 @@
                             <td class="load_label"><h5>Overloaded</h5></td>
                         </tr>
                         <tr>
-                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_total" value="(@{hitloc1_enc}+@{hitloc2_enc}+@{hitloc3_enc}+@{hitloc4_enc}+@{hitloc5_enc}+@{hitloc6_enc}+@{hitloc7_enc}+@{hitloc8_enc}+@{hitloc9_enc}+@{hitloc10_enc}+@{hitloc11_enc}+@{shield_enc}+@{weapon1_enc}+@{weapon2_enc}+@{weapon3_enc}+@{weapon4_enc}+@{weapon5_enc}+@{weapon6_enc}+@{weapon7_enc}+@{weapon8_enc}+(@{item1_enc}*@{item1_qnty})+(@{item2_enc}*@{item2_qnty})+(@{item3_enc}*@{item3_qnty})+(@{item4_enc}*@{item4_qnty})+(@{item5_enc}*@{item5_qnty})+(@{item6_enc}*@{item6_qnty})+(@{item7_enc}*@{item7_qnty})+(@{item8_enc}*@{item8_qnty})+(@{item9_enc}*@{item9_qnty})+(@{item10_enc}*@{item10_qnty})+(@{item11_enc}*@{item11_qnty})+(@{item12_enc}*@{item12_qnty})+(@{item13_enc}*@{item13_qnty})+(@{item14_enc}*@{item14_qnty})+(@{item15_enc}*@{item15_qnty})+(@{item16_enc}*@{item16_qnty})+(@{item17_enc}*@{item17_qnty})+(@{item18_enc}*@{item18_qnty})+(@{item19_enc}*@{item19_qnty})+(@{item20_enc}*@{item20_qnty})+(@{item21_enc}*@{item21_qnty})+(@{item22_enc}*@{item22_qnty})+(@{item23_enc}*@{item23_qnty})+(@{item24_enc}*@{item24_qnty})+(@{item25_enc}*@{item25_qnty})+(@{item26_enc}*@{item26_qnty})+(@{item27_enc}*@{item27_qnty})+(@{item28_enc}*@{item28_qnty})+(@{item29_enc}*@{item29_qnty})+(@{item30_enc}*@{item30_qnty}))*(@{avg_species_siz}/13)" disabled="true"/></td>
-                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_overloaded" value="(@{str}+@{siz}+1)" disabled="true"/></td>
+                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_total" value="0" readonly="true"/></td>
+                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_overloaded" value="0" readonly="true"/></td>
                         </tr>
                     </table>
                     <table class="full">
@@ -1276,8 +1048,8 @@
                             <td><h5>Str & Dex Skills:</h5></td>
                             <td>
                                 <select class="full" name="attr_enc_skill_mod">
-                                    <option value="Standard">Standard</option>
-                                    <option value="-20%">-20%</option>
+                                    <option value="-0">Standard</option>
+                                    <option value="-20">-20%</option>
                                 </select>
                             </td>
                         </tr>
@@ -1285,8 +1057,8 @@
                             <td><h5>Fatigue Tests:</h5></td>
                             <td>
                                 <select class="full" name="attr_enc_fatigue_mod">
-                                    <option value="Normal">Normal</option>
-                                    <option value="-20%">-20%</option>
+                                    <option value="-0">Normal</option>
+                                    <option value="-20">-20%</option>
                                 </select>
                             </td>
                         </tr>
@@ -1301,7 +1073,7 @@
                         </tr>
 
                     </table>
-                    <p style="margin:0px;font-size:75%">Current load includes worn armor, shield, weapons & equipment
+                    <p style="margin:0px;font-size:75%">Overloaded maluses must be applied to skills/fatigue tests manually
                 </div>
             </div>
         </div>
@@ -1391,6 +1163,13 @@
                             </tr>
                         </table>
                     </fieldset>
+                </div>
+            </div>
+
+            <div class="column-1of1">
+                <div class="section">
+                    <h3>Heroic Abilities</h3>
+                    <textarea class="heroic_abilities" name="attr_heroic_abilities"></textarea>
                 </div>
             </div>
 
@@ -1640,17 +1419,190 @@
 <rolltemplate class="sheet-rolltemplate-runequest-weapon">
     <table>
         <caption>{{name}}</caption>
-        <tr><td class="template_label">Damage:</td><td class="template_value">{{damage}}</td></tr>
+        <tr style="background:#DFF0D8;"><td class="template_label">Damage:</td><td class="template_value">{{damage}}</td></tr>
         {{#size/reach}}
-        <tr><td class="template_label">Size/Reach:</td><td class="template_value">{{size/reach}}</td></tr>
+        <tr style="background:#DFF0D8;"><td class="template_label">Size/Reach:</td><td class="template_value">{{size/reach}}</td></tr>
         {{/size/reach}}
-        {{#effects}}
-        <tr><td class="template_label">Effects:</td>:</td><td class="template_value">{{effects}}</td></tr>
-        {{/effects}}
+        {{#manoeuvres}}
+        <tr style="background:#DFF0D8;"><td class="template_label">Manoeuvres:</td>:</td><td class="template_value">{{manoeuvres}}</td></tr>
+        {{/manoeuvres}}
     </table>
 </rolltemplate>
 
 <script type="text/worker">
+
+    /* ===== PARAMETERS ==========
+    destinations = the name of the attribute that stores the total quantity
+            can be a single attribute, or an array: ['total_cost', 'total_weight']
+            If more than one, the matching fields must be in the same order.
+        section = name of repeating fieldset, without the repeating_
+        fields = the name of the attribute field to be summed
+              destination and fields both can be a single attribute: 'weight'
+              or an array of attributes: ['weight','number','equipped']
+    */
+    const repeatingSum = (destinations, section, fields) => {
+        if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
+        if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
+        getSectionIDs(`repeating_${section}`, idArray => {
+            const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
+            getAttrs([...attrArray], v => {
+                const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
+                const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
+                const output = {};
+                destinations.forEach((destination, index) => {
+                    output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
+                });
+                setAttrs(output);
+            });
+        });
+    };
+
+
+    on('sheet:opened change:str_std change:str_temp', function() {
+        getAttrs(["str_std", "str_temp"], function(values) {
+            let std = parseInt(values.str_std)||1000;
+            let temp = parseInt(values.str_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_str": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:int_std change:int_temp', function() {
+        getAttrs(["int_std", "int_temp"], function(values) {
+            let std = parseInt(values.int_std)||0;
+            let temp = parseInt(values.int_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_int": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:con_std change:con_temp', function() {
+        getAttrs(["con_std", "con_temp"], function(values) {
+            let std = parseInt(values.con_std)||0;
+            let temp = parseInt(values.con_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_con": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:pow_std change:pow_temp', function() {
+        getAttrs(["pow_std", "pow_temp"], function(values) {
+            let std = parseInt(values.pow_std)||0;
+            let temp = parseInt(values.pow_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_pow": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:siz_std change:siz_temp', function() {
+        getAttrs(["siz_std", "siz_temp"], function(values) {
+            let std = parseInt(values.siz_std)||0;
+            let temp = parseInt(values.siz_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_siz": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:cha_std change:cha_temp', function() {
+        getAttrs(["cha_std", "cha_temp"], function(values) {
+            let std = parseInt(values.cha_std)||0;
+            let temp = parseInt(values.cha_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_cha": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:dex_std change:dex_temp', function() {
+        getAttrs(["dex_std", "dex_temp"], function(values) {
+            let std = parseInt(values.dex_std)||0;
+            let temp = parseInt(values.dex_temp)||0;
+            let tot = std+temp;
+            setAttrs({
+                "hidden_dex": tot
+            });
+        });
+    });
+
+    on('sheet:opened change:hidden_str change:hidden_siz', function() {
+        getAttrs(["hidden_str", "hidden_siz"], function(values) {
+            let str = parseInt(values.hidden_str)||0;
+            let siz = parseInt(values.hidden_siz)||0;
+            let tot = str+siz;
+            setAttrs({
+                "enc_overloaded": tot
+            });
+        });
+    });
+
+    on('change:repeating_weapons remove:repeating_weapons', function() {
+	    repeatingSum("total_weapon_enc","weapons","weapon_enc");
+    });
+
+    on('change:repeating_items remove:repeating_items', function() {
+	    repeatingSum("total_item_enc","items",["item_enc","item_qnty"]);
+    });
+
+    on('change:hitloc1_enc change:hitloc2_enc change:hitloc3_enc change:hitloc4_enc change:hitloc5_enc change:hitloc6_enc change:hitloc7_enc', function() {
+	    getAttrs(["hitloc1_enc", "hitloc2_enc", "hitloc3_enc", "hitloc4_enc", "hitloc5_enc", "hitloc6_enc", "hitloc7_enc"], function(values) {
+            let loc1 = parseInt(values.hitloc1_enc)||0;
+            let loc2 = parseInt(values.hitloc2_enc)||0;
+            let loc3 = parseInt(values.hitloc3_enc)||0;
+            let loc4 = parseInt(values.hitloc4_enc)||0;
+            let loc5 = parseInt(values.hitloc5_enc)||0;
+            let loc6 = parseInt(values.hitloc6_enc)||0;
+            let loc7 = parseInt(values.hitloc7_enc)||0;
+            let tot = loc1+loc2+loc3+loc4+loc5+loc6+loc7;
+            setAttrs({
+                "total_armor_enc": tot
+            });
+	    });
+    });
+
+    on('change:total_weapon_enc change:total_item_enc change:total_armor_enc', function() {
+        getAttrs(["total_weapon_enc", "total_item_enc", "total_armor_enc"], function(values) {
+            let weapon = parseInt(values.total_weapon_enc)||0;
+            let item = parseInt(values.total_item_enc)||0;
+            let armor = parseInt(values.total_armor_enc)||0;
+            let tot = weapon+item+armor;
+            setAttrs({
+                "enc_total": tot
+            });
+        });
+    });
+
+    on('change:enc_total', function() {
+	    getAttrs(["enc_total", "enc_overloaded"], function(values) {
+            let total = parseInt(values.enc_total)||0;
+            let overloaded = parseInt(values.enc_overloaded)||0;
+            if (total >= overloaded) {
+                setAttrs({
+                    "enc_skill_mod": "-20",
+                    "enc_fatigue_mod": "-20",
+                    "enc_move_rate_mod": "*.5",
+                });
+            }
+            else {
+                setAttrs({
+                    "enc_skill_mod": "-0",
+                    "enc_fatigue_mod": "-0",
+                    "enc_move_rate_mod": "-0",
+                });
+            }
+        });
+    });
+
     on("change:fatigue", function() {
         getAttrs(["fatigue"], function(values) {
             let fatigue = values.fatigue;
