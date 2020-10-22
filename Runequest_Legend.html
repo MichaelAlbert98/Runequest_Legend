@@ -2,7 +2,7 @@
     <div class="column-1of1">
         <div class='column-1n2of3'>
             <div class="section">
-                <table class="full">
+                <table class="header">
                     <tr>
                         <td class="info-label">Name: </td>
                         <td><input type="text" class="full" name="attr_name"></td>
@@ -10,34 +10,32 @@
                         <td><input type="text" class="full" name="attr_species"></td>
                         <td class="info-label">Homeland: </td>
                         <td><input type="text" class="full" name="attr_homeland"></td>
-                        <td class="info-label">Age: </td>
-                        <td><input type="text" class="info-number" name="attr_age"></td>
                     </tr>
                 </table>
-                <table class="full">
+                <table class="header">
                     <tr>
                         <td class="info-label">Culture: </td>
                         <td><input type="text" class="full" name="attr_culture"></td>
-                        <td class="info-label">Career: </td>
-                        <td><input type="text" class="full" name="attr_career"></td>
-                        <td class="info-label">Social Class: </td>
-                        <td><input type="text" class="full" name="attr_social_class"></td>
-                        <td class="info-label">Gender: </td>
-                        <td><input type="text" class="full" name="attr_gender"></td>
+                        <td class="info-label">Profession: </td>
+                        <td><input type="text" class="full" name="attr_profession"></td>
+                        <td class="info-label">Handedness: </td>
+                        <td><input type="text" class="full" name="attr_handedness"></td>
                     </tr>
                 </table>
                 <table class="full">
                     <tr>
-                        <td class="info-label">Handedness: </td>
-                        <td><input type="text" class="full" name="attr_handedness"></td>
-                        <td class="info-label">Frame: </td>
-                        <td><input type="text" class="full" name="attr_frame"></td>
+                        <td class="info-label">Gender: </td>
+                        <td><input type="text" class="full" name="attr_gender"></td>
+                        <td class="info-label">Age: </td>
+                        <td><input type="text" class="info-number" name="attr_age"></td>
                         <td class="info-label">Weight: </td>
                         <td><input type="text" class="info-number" name="attr_weight"></td>
                         <td class="info-label">Height: </td>
                         <td><input type="text" class="info-number" name="attr_height"></td>
+                        <td class="info-label">Hero Points: </td>
+                        <td><input type="text" class="info-number" name="attr_hero_points"/></td>
                         <td class="info-label">XP Rolls: </td>
-                        <td><input type="text" class="info-number" name="attr_xp_rolls" value="0"></td>
+                        <td><input type="text" class="info-number" name="attr_xp_rolls"></td>
                     </tr>
                 </table>
             </div>
@@ -219,7 +217,7 @@
                             <td><input class="value" type="text" name="attr_hitloc1_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc1_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc1_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc1_hp_max" value="ceil((@{hidden_con}+@{hidden_siz})/5)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc2_roll" value="4-6"/></td>
@@ -231,7 +229,7 @@
                             <td><input class="value" type="text" name="attr_hitloc2_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc2_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc2_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc2_hp_max" value="ceil((@{hidden_con}+@{hidden_siz})/5)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc3_roll" value="7-9"/></td>
@@ -243,7 +241,7 @@
                             <td><input class="value" type="text" name="attr_hitloc3_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc3_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc3_hp_max" value="(ceil((@{con}+@{siz})/5)+1)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc3_hp_max" value="(ceil((@{hidden_con}+@{hidden_siz})/5)+1)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc4_roll" value="10-12"/></td>
@@ -255,7 +253,7 @@
                             <td><input class="value" type="text" name="attr_hitloc4_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc4_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc4_hp_max" value="(ceil((@{con}+@{siz})/5)+2)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc4_hp_max" value="(ceil((@{hidden_con}+@{hidden_siz})/5)+2)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc5_roll" value="13-15"/></td>
@@ -267,7 +265,7 @@
                             <td><input class="value" type="text" name="attr_hitloc5_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc5_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc5_hp_max" value="ceil((@{con}+@{siz}-5)/5)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc5_hp_max" value="ceil((@{hidden_con}+@{hidden_siz}-5)/5)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc6_roll" value="16-18"/></td>
@@ -279,7 +277,7 @@
                             <td><input class="value" type="text" name="attr_hitloc6_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc6_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc6_hp_max" value="ceil((@{con}+@{siz}-5)/5)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc6_hp_max" value="ceil((@{hidden_con}+@{hidden_siz}-5)/5)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc7_roll" value="19-20"/></td>
@@ -291,7 +289,7 @@
                             <td><input class="value" type="text" name="attr_hitloc7_apmax"/>
                             <td><input class="value" type="text" name="attr_hitloc7_hp"/></td>
                             <td>/</td>
-                            <td><input class="value" type="number" name="attr_hitloc7_hp_max" value="ceil((@{con}+@{siz})/5)" disabled/></td>
+                            <td><input class="value" type="number" name="attr_hitloc7_hp_max" value="ceil((@{hidden_con}+@{hidden_siz})/5)" disabled/></td>
                         </tr>
                         <tr>
                             <td><input class="value_full" type="text" name="attr_hitloc8_roll"/></td>
@@ -358,7 +356,7 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Combat Actions: </td>
-                            <td><input type="number" class="value" name="attr_action_points_std" value="ceil((@{int}+@{dex}+@{fatigue_action_points})/12)" disabled/></td>
+                            <td><input type="number" class="value" name="attr_action_points_std" value="ceil((@{hidden_int}+@{hidden_dex}+@{hidden_fatigue_action_points})/12)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_action_points_temp" value="0"/></td>
                             <td>=</td>
@@ -368,7 +366,7 @@
                         </tr>
                         <tr>
                             <td class="attribute-label">Magic Points: </td>
-                            <td><input type="number" class="value" name="attr_magic_points_std" value="@{pow}" disabled/></td>
+                            <td><input type="number" class="value" name="attr_magic_points_std" value="@{hidden_pow}" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_magic_points_temp" value="0"/></td>
                             <td>=</td>
@@ -383,20 +381,20 @@
                             <td><input type="text" class="value" name="attr_movement_rate_temp" value="0"/></td>
                             <td>=</td>
                             <td colspan="2"></td>
-                            <td><input type="number" class="total" name="attr_movement_rate" value="ceil(((@{movement_rate_std}+@{movement_rate_temp})@{enc_move_rate_mod})@{fatigue_movement})" disabled/></td>
+                            <td><input type="number" class="total" name="attr_movement_rate" value="ceil(((@{movement_rate_std}+@{movement_rate_temp})@{hidden_enc_move_rate_mod})@{hidden_fatigue_movement})" disabled/></td>
                         </tr>
                         <tr>
                             <td class="attribute-label">Strike Rank: </td>
-                            <td><input type="number" class="value" name="attr_strike_rank_std" value="ceil((@{int}+@{dex})/2)" disabled/></td>
+                            <td><input type="number" class="value" name="attr_strike_rank_std" value="ceil((@{hidden_int}+@{hidden_dex})/2)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_strike_rank_temp" value="0"/></td>
                             <td>=</td>
                             <td colspan="2"></td>
-                            <td><input type="number" class="total" name="attr_strike_rank" value="(((@{strike_rank_std}+@{strike_rank_temp})+@{armor_penalty})+@{fatigue_strike_rank})" disabled/></td>
+                            <td><input type="number" class="total" name="attr_strike_rank" value="(((@{strike_rank_std}+@{strike_rank_temp})+@{armor_penalty})+@{hidden_fatigue_strike_rank})" disabled/></td>
                         </tr>
                         <tr>
                             <td class="attribute-label">Exp. Mod: </td>
-                            <td><input type="number" class="value" name="attr_experience_mod_std" value="(ceil(@{cha}/6)-2)" disabled/></td>
+                            <td><input type="number" class="value" name="attr_experience_mod_std" value="(ceil(@{hidden_cha}/6)-2)" disabled/></td>
                             <td>+</td>
                             <td><input type="text" class="value" name="attr_experience_mod_temp" value="0"/></td>
                             <td>=</td>
@@ -421,16 +419,6 @@
                                     <option value="24">12</option>
                                 </select>
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="attribute-label">Hero Points: </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><input type="number" class="total" name="attr_luck_points_max" value="(@{luck_points_std}+@{luck_points_temp})" enabled/></td>
                         </tr>
                     </table>
                     <table class="full">
@@ -519,6 +507,14 @@
                             </td>
                         </tr>
                     </table>
+                    <input type="hidden" name="attr_hidden_fatigue_skillgrade" value="0" />
+                    <input type="hidden" name="attr_hidden_fatigue_movement" value="0" />
+                    <input type="hidden" name="attr_hidden_fatigue_strike_rank" value="0" />
+                    <input type="hidden" name="attr_hidden_fatigue_action_points" value="0" />
+                    <input type="hidden" name="attr_hidden_fatigue_skillgrade1" value="Standard" />
+                    <input type="hidden" name="attr_hidden_fatigue_movement1" value="No Penalties" />
+                    <input type="hidden" name="attr_hidden_fatigue_strike_rank1" value="No Penalties" />
+                    <input type="hidden" name="attr_hidden_fatigue_action_points1" value="No Penalties" />
                     <table class="full">
                         <tr class="head">
                             <td class="fatigue_skillgrade"><h5>Skill Grade</h5></td>
@@ -526,39 +522,10 @@
                             <td class="fatigue_strike_rank"><h5>Strike Rank</h5></td>
                             <td class="fatigue_action_points"><h5>Combat Actions</h5></td>
                         </tr>
-                        <tr>
-                            <td>
-                                <select class="full" name="attr_fatigue_skillgrade" >
-                                    <option value=+0 selected>Standard</option>
-                                    <option value=-10>-10%</option>
-                                    <option value=-20>-20%</option>
-                                    <option value=-30>-30%</option>
-                                    <option value=-40>-40%</option>
-                                    <option value=-50>-50%</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="full" name="attr_fatigue_movement">
-                                    <option value="+0" selected>No penalties</option>
-                                    <option value="-1">-1 metres</option>
-                                    <option value="*.5">Halved</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="full" name="attr_fatigue_strike_rank">
-                                    <option value="0" selected>No penalties</option>
-                                    <option value="-2">-2</option>
-                                    <option value="-4">-4</option>
-                                    <option value="-6">-6</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="full" name="attr_fatigue_action_points">
-                                    <option value=0 selected>No penalties</option>
-                                    <option value=-5>-5 Combat Art DEX</option>
-                                    <option value=-10>-10 Combat Art DEX</option>
-                                </select>
-                            </td>
+                        <td><input class="full" type="text" name="attr_fatigue_skillgrade" value="@{hidden_fatigue_skillgrade1}"disabled/></td>
+                        <td><input class="full" type="text" name="attr_fatigue_movement" value="@{hidden_fatigue_movement1}"disabled/></td>
+                        <td><input class="full" type="text" name="attr_fatigue_strike_rank" value="@{hidden_fatigue_strike_rank1}"disabled/></td>
+                        <td><input class="full" type="text" name="attr_fatigue_action_points" value="@{hidden_fatigue_action_points1}"disabled/></td>
                         </tr>
                     </table>
                 </div>
@@ -584,9 +551,9 @@
                         <td class="cs_style"><input class="full" type="text" name="attr_unarmed_name" value="Unarmed" disabled="true"></td>
                         <td class="cs_calc">STR+DEX+<input class="value" type="text" name="attr_unarmed_cs_points" value="@{unarmed_points}" disabled="true">+<input class="value" type="text" name="attr_unarmed_cs_temp" value="@{unarmed_temp}" disabled="true"></td>
                         <td class="cs_symbol">=</td>
-                        <td class="cs_number"><input class="total" type="number" name="attr_unarmed_cs_total" value="(@{str}+@{dex}+@{unarmed_points}+@{unarmed_temp})" disabled="true"></td>
-                        <td class="cs_roll"><button type='roll' name="roll_unarmed_cs_check" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[@{unarmed_cs_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{unarmed_cs_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_unarmed_cs_check_penalized" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[ @{unarmed_cs_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{unarmed_cs_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td class="cs_number"><input class="total" type="number" name="attr_unarmed_cs_total" value="(@{hidden_str}+@{hidden_dex}+@{unarmed_points}+@{unarmed_temp})" disabled="true"></td>
+                        <td class="cs_roll"><button type='roll' name="roll_unarmed_cs_check" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[@{unarmed_cs_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{unarmed_cs_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                            <button type='roll' name="roll_unarmed_cs_check_penalized" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[ @{unarmed_cs_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{unarmed_cs_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="cs_weapons"><input class="full" type="text" name="attr_unarmed_cs_weapons"></td>
                         <td class="cs_benefits"><input class="full" type="text" name="attr_unarmed_cs_benefits"></td>
                     </tr>
@@ -596,9 +563,9 @@
                         <td class="cs_style"><input class="full" type="text" name="attr_combat_style1_name"></td>
                         <td class="cs_calc">STR+DEX+<input class="value" type="text" name="attr_combat_style1_points" value="0">+<input class="value" type="text" name="attr_combat_style1_temp" value="0"></td>
                         <td class="cs_symbol">=</td>
-                        <td class="cs_number"><input class="total" type="number" name="attr_combat_style1_total" value="(@{str}+@{dex}+@{combat_style1_points}+@{combat_style1_temp})" disabled="true"></td>
-                        <td class="cs_roll"><button type='roll' name="roll_combat_style1_check" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[@{combat_style1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                        <button type='roll' name="roll_combat_style1_check_penalized" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[ @{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td class="cs_number"><input class="total" type="number" name="attr_combat_style1_total" value="(@{hidden_str}+@{hidden_dex}+@{combat_style1_points}+@{combat_style1_temp})" disabled="true"></td>
+                        <td class="cs_roll"><button type='roll' name="roll_combat_style1_check" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[@{combat_style1_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style1_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                        <button type='roll' name="roll_combat_style1_check_penalized" value="&{template:runequest} {{name=@{combat_style1_name}}} {{very_easy=[[ @{combat_style1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="cs_weapons"><input class="full" type="text" name="attr_combat_style1_weapons"></td>
                         <td class="cs_benefits"><input class="full" type="text" name="attr_combat_style1_benefits"></td>
                     </tr>
@@ -609,9 +576,9 @@
                             <td class="cs_style"><input class="full" type="text" name="attr_stylename"></td>
                             <td class="cs_calc">STR+DEX+<input class="value" type="text" name="attr_points" value="0">+<input class="value" type="text" name="attr_temp" value="0"></td>
                             <td class="cs_symbol">=</td>
-                            <td class="cs_number"><input class="total" type="number" name="attr_total" value="(@{str}+@{dex}+@{points}+@{temp})" disabled="true"></td>
-                            <td class="cs_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[@{total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="cs_number"><input class="total" type="number" name="attr_total" value="(@{hidden_str}+@{hidden_dex}+@{points}+@{temp})" disabled="true"></td>
+                            <td class="cs_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[@{total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             <td class="cs_weapons"><input class="full" type="text" name="attr_weapons"></td>
                             <td class="cs_benefits"><input class="full" type="text" name="attr_benefits"></td>
                         </tr>
@@ -622,9 +589,9 @@
                         <td class="cs_style"><input class="full" type="text" name="attr_combat_style2_name"></td>
                         <td class="cs_calc">DEXx2+<input class="value" type="text" name="attr_combat_style2_points" value="0">+<input class="value" type="text" name="attr_combat_style2_temp" value="0"></td>
                         <td class="cs_symbol">=</td>
-                        <td class="cs_number"><input class="total" type="number" name="attr_combat_style2_total" value="(@{dex}+@{dex}+@{combat_style1_points}+@{combat_style2_temp})" disabled="true"></td>
-                        <td class="cs_roll"><button type='roll' name="roll_combat_style2_check" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[@{combat_style2_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style2_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                        <button type='roll' name="roll_combat_style2_check_penalized" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[ @{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td class="cs_number"><input class="total" type="number" name="attr_combat_style2_total" value="(@{hidden_dex}+@{hidden_dex}+@{combat_style1_points}+@{combat_style2_temp})" disabled="true"></td>
+                        <td class="cs_roll"><button type='roll' name="roll_combat_style2_check" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[@{combat_style2_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{combat_style2_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                        <button type='roll' name="roll_combat_style2_check_penalized" value="&{template:runequest} {{name=@{combat_style2_name}}} {{very_easy=[[ @{combat_style2_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{combat_style2_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="cs_weapons"><input class="full" type="text" name="attr_combat_style1_weapons"></td>
                         <td class="cs_benefits"><input class="full" type="text" name="attr_combat_style1_benefits"></td>
                     </tr>
@@ -636,9 +603,9 @@
                             <td class="cs_style"><input class="full" type="text" name="attr_stylename"></td>
                             <td class="cs_calc">DEXx2+<input class="value" type="text" name="attr_points" value="0">+<input class="value" type="text" name="attr_temp" value="0"></td>
                             <td class="cs_symbol">=</td>
-                            <td class="cs_number"><input class="total" type="number" name="attr_total" value="(@{dex}+@{dex}+@{points}+@{temp})" disabled="true"></td>
-                            <td class="cs_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[@{total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="cs_number"><input class="total" type="number" name="attr_total" value="(@{hidden_dex}+@{hidden_dex}+@{points}+@{temp})" disabled="true"></td>
+                            <td class="cs_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[@{total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{stylename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             <td class="cs_weapons"><input class="full" type="text" name="attr_weapons"></td>
                             <td class="cs_benefits"><input class="full" type="text" name="attr_benefits"></td>
                         </tr>
@@ -695,161 +662,161 @@
                             <td class="skill">Athletics</td>
                             <td class="skill_calc">STR+DEX+<input type="text" class="value" name="attr_athletics_points" value="0"/>+<input type="text" class="value" name="attr_athletics_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_athletics_total" value="(@{str}+@{dex}+@{athletics_points}+@{athletics_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_athletics_check" value="&{template:runequest} {{name=Athletics}} {{very_easy=[[@{athletics_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{athletics_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_athletics_check_penalized" value="&{template:runequest} {{name=Athletics}} {{very_easy=[[ @{athletics_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{athletics_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_athletics_total" value="(@{hidden_str}+@{hidden_dex}+@{athletics_points}+@{athletics_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_athletics_check" value="&{template:runequest} {{name=Athletics}} {{very_easy=[[@{athletics_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{athletics_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_athletics_check_penalized" value="&{template:runequest} {{name=Athletics}} {{very_easy=[[ @{athletics_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{athletics_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Brawn</td>
                             <td class="skill_calc">STR+SIZ+<input type="text" class="value" name="attr_brawn_points" value="0"/>+<input type="text" class="value" name="attr_brawn_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_brawn_total" value="(@{str}+@{siz}+@{brawn_points}+@{brawn_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_brawn_check" value="&{template:runequest} {{name=Brawn}} {{very_easy=[[@{brawn_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{brawn_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_brawn_check_penalized" value="&{template:runequest} {{name=Brawn}} {{very_easy=[[ @{brawn_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{brawn_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_brawn_total" value="(@{hidden_str}+@{hidden_siz}+@{brawn_points}+@{brawn_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_brawn_check" value="&{template:runequest} {{name=Brawn}} {{very_easy=[[@{brawn_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{brawn_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_brawn_check_penalized" value="&{template:runequest} {{name=Brawn}} {{very_easy=[[ @{brawn_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{brawn_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Culture (Own)</td>
                             <td class="skill_calc">INTx2+<input type="text" class="value" name="attr_culture_(own)_points" value="0"/>+<input type="text" class="value" name="attr_culture_(own)_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_culture_(own)_total" value="(@{int}+@{int}+@{culture_(own)_points}+@{culture_(own)_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_culture_(own)_check" value="&{template:runequest} {{name=Culture (Own)}} {{very_easy=[[@{culture_(own)_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{culture_(own)_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_culture_(own)_check_penalized" value="&{template:runequest} {{name=Culture (Own)}} {{very_easy=[[ @{culture_(own)_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{culture_(own)_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_culture_(own)_total" value="(@{hidden_int}+@{hidden_int}+@{culture_(own)_points}+@{culture_(own)_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_culture_(own)_check" value="&{template:runequest} {{name=Culture (Own)}} {{very_easy=[[@{culture_(own)_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{culture_(own)_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_culture_(own)_check_penalized" value="&{template:runequest} {{name=Culture (Own)}} {{very_easy=[[ @{culture_(own)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{culture_(own)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Dance</td>
                             <td class="skill_calc">DEX+CHA+<input type="text" class="value" name="attr_dance_points" value="0"/>+<input type="text" class="value" name="attr_dance_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_dance_total" value="(@{dex}+@{cha}+@{dance_points}+@{dance_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_dance_check" value="&{template:runequest} {{name=Dance}} {{very_easy=[[@{dance_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{dance_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_dance_check_penalized" value="&{template:runequest} {{name=Dance}} {{very_easy=[[ @{dance_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{dance_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_dance_total" value="(@{hidden_dex}+@{hidden_cha}+@{dance_points}+@{dance_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_dance_check" value="&{template:runequest} {{name=Dance}} {{very_easy=[[@{dance_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{dance_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_dance_check_penalized" value="&{template:runequest} {{name=Dance}} {{very_easy=[[ @{dance_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{dance_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Drive</td>
                             <td class="skill_calc">DEX+POW+<input type="text" class="value" name="attr_drive_points" value="0"/>+<input type="text" class="value" name="attr_drive_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_drive_total" value="(@{dex}+@{pow}+@{drive_points}+@{drive_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_drive_check" value="&{template:runequest} {{name=Drive}} {{very_easy=[[@{drive_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{drive_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_drive_check_penalized" value="&{template:runequest} {{name=Drive}} {{very_easy=[[ @{drive_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{drive_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_drive_total" value="(@{hidden_dex}+@{hidden_pow}+@{drive_points}+@{drive_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_drive_check" value="&{template:runequest} {{name=Drive}} {{very_easy=[[@{drive_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{drive_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_drive_check_penalized" value="&{template:runequest} {{name=Drive}} {{very_easy=[[ @{drive_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{drive_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Evade</td>
                             <td class="skill_calc">DEXx2+<input type="text" class="value" name="attr_evade_points" value="0"/>+<input type="text" class="value" name="attr_evade_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_evade_total" value="(@{dex}+@{dex}+@{evade_points}+@{evade_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_evade_check" value="&{template:runequest} {{name=Evade}} {{very_easy=[[@{evade_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{evade_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_evade_check_penalized" value="&{template:runequest} {{name=Evade}} {{very_easy=[[ @{evade_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{evade_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_evade_total" value="(@{hidden_dex}+@{hidden_dex}+@{evade_points}+@{evade_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_evade_check" value="&{template:runequest} {{name=Evade}} {{very_easy=[[@{evade_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{evade_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_evade_check_penalized" value="&{template:runequest} {{name=Evade}} {{very_easy=[[ @{evade_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{evade_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Evaluate</td>
                             <td class="skill_calc">INT+CHA+<input type="text" class="value" name="attr_evaluate_points" value="0"/>+<input type="text" class="value" name="attr_evaluate_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_evaluate_total" value="(@{int}+@{cha}+@{evaluate_points}+@{evaluate_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_evaluate_check" value="&{template:runequest} {{name=Evaluate}} {{very_easy=[[@{evaluate_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{evaluate_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_evaluate_check_penalized" value="&{template:runequest} {{name=Evaluate}} {{very_easy=[[ @{evaluate_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{evaluate_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_evaluate_total" value="(@{hidden_int}+@{hidden_cha}+@{evaluate_points}+@{evaluate_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_evaluate_check" value="&{template:runequest} {{name=Evaluate}} {{very_easy=[[@{evaluate_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{evaluate_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_evaluate_check_penalized" value="&{template:runequest} {{name=Evaluate}} {{very_easy=[[ @{evaluate_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{evaluate_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">First Aid</td>
                             <td class="skill_calc">INT+DEX+<input type="text" class="value" name="attr_first_aid_points" value="0"/>+<input type="text" class="value" name="attr_first_aid_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_first_aid_total" value="(@{int}+@{dex}+@{first_aid_points}+@{first_aid_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_first_aid_check" value="&{template:runequest} {{name=First Aid}} {{very_easy=[[@{first_aid_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{first_aid_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_first_aid_check_penalized" value="&{template:runequest} {{name=First Aid}} {{very_easy=[[ @{first_aid_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{first_aid_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_first_aid_total" value="(@{hidden_int}+@{hidden_dex}+@{first_aid_points}+@{first_aid_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_first_aid_check" value="&{template:runequest} {{name=First Aid}} {{very_easy=[[@{first_aid_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{first_aid_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_first_aid_check_penalized" value="&{template:runequest} {{name=First Aid}} {{very_easy=[[ @{first_aid_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{first_aid_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Influence</td>
                             <td class="skill_calc">CHAx2+<input type="text" class="value" name="attr_influence_points" value="0"/>+<input type="text" class="value" name="attr_influence_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_influence_total" value="(@{cha}+@{cha}+@{influence_points}+@{influence_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_influence_check" value="&{template:runequest} {{name=Influence}} {{very_easy=[[@{influence_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{influence_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_influence_check_penalized" value="&{template:runequest} {{name=Influence}} {{very_easy=[[ @{influence_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{influence_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_influence_total" value="(@{hidden_cha}+@{hidden_cha}+@{influence_points}+@{influence_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_influence_check" value="&{template:runequest} {{name=Influence}} {{very_easy=[[@{influence_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{influence_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_influence_check_penalized" value="&{template:runequest} {{name=Influence}} {{very_easy=[[ @{influence_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{influence_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Insight</td>
                             <td class="skill_calc">INT+POW+<input type="text" class="value" name="attr_insight_points" value="0"/>+<input type="text" class="value" name="attr_insight_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_insight_total" value="(@{int}+@{pow}+@{insight_points}+@{insight_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_insight_check" value="&{template:runequest} {{name=Insight}} {{very_easy=[[@{insight_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{insight_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_insight_check_penalized" value="&{template:runequest} {{name=Insight}} {{very_easy=[[ @{insight_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{insight_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_insight_total" value="(@{hidden_int}+@{hidden_pow}+@{insight_points}+@{insight_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_insight_check" value="&{template:runequest} {{name=Insight}} {{very_easy=[[@{insight_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{insight_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_insight_check_penalized" value="&{template:runequest} {{name=Insight}} {{very_easy=[[ @{insight_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{insight_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Lore (Regional)</td>
                             <td class="skill_calc">INTx2+<input type="text" class="value" name="attr_lore_(regional)_points" value="0"/>+<input type="text" class="value" name="attr_lore_(regional)_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_lore_(regional)_total" value="(@{int}+@{int}+@{lore_(regional)_points}+@{lore_(regional)_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_lore_(regional)_check" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[@{lore_(regional)_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{lore_(regional)_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}}">
-                                <button type='roll' name="roll_lore_(regional)_check_penalized" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[ @{lore_(regional)_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{lore_(regional)_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_lore_(regional)_total" value="(@{hidden_int}+@{hidden_int}+@{lore_(regional)_points}+@{lore_(regional)_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_lore_(regional)_check" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[@{lore_(regional)_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{lore_(regional)_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}}">
+                                <button type='roll' name="roll_lore_(regional)_check_penalized" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[ @{lore_(regional)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{lore_(regional)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Perception</td>
                             <td class="skill_calc">INT+POW+<input type="text" class="value" name="attr_perception_points" value="0"/>+<input type="text" class="value" name="attr_perception_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_perception_total" value="(@{int}+@{pow}+@{perception_points}+@{perception_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_perception_check" value="&{template:runequest} {{name=Perception}} {{very_easy=[[@{perception_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{perception_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_perception_check_penalized" value="&{template:runequest} {{name=Perception}} {{very_easy=[[ @{perception_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{perception_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_perception_total" value="(@{hidden_int}+@{hidden_pow}+@{perception_points}+@{perception_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_perception_check" value="&{template:runequest} {{name=Perception}} {{very_easy=[[@{perception_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{perception_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_perception_check_penalized" value="&{template:runequest} {{name=Perception}} {{very_easy=[[ @{perception_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{perception_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Persistence</td>
                             <td class="skill_calc">POWx2+<input type="text" class="value" name="attr_persistence_points" value="0"/>+<input type="text" class="value" name="attr_persistence_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_persistence_total" value="(@{pow}+@{pow}+@{persistence_points}+@{persistence_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_persistence_check" value="&{template:runequest} {{name=Persistence}} {{very_easy=[[@{persistence_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{persistence_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_persistence_check_penalized" value="&{template:runequest} {{name=Persistence}} {{very_easy=[[ @{persistence_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{persistence_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_persistence_total" value="(@{hidden_pow}+@{hidden_pow}+@{persistence_points}+@{persistence_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_persistence_check" value="&{template:runequest} {{name=Persistence}} {{very_easy=[[@{persistence_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{persistence_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_persistence_check_penalized" value="&{template:runequest} {{name=Persistence}} {{very_easy=[[ @{persistence_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{persistence_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Resilience</td>
                             <td class="skill_calc">CONx2+<input type="text" class="value" name="attr_resilience_points" value="0"/>+<input type="text" class="value" name="attr_resilience_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_resilience_total" value="(@{con}+@{con}+@{resilience_points}+@{resilience_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_resilience_check" value="&{template:runequest} {{name=Resilience}} {{very_easy=[[@{resilience_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{resilience_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_resilience_check_penalized" value="&{template:runequest} {{name=Resilience}} {{very_easy=[[ @{resilience_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{resilience_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_resilience_total" value="(@{hidden_con}+@{hidden_con}+@{resilience_points}+@{resilience_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_resilience_check" value="&{template:runequest} {{name=Resilience}} {{very_easy=[[@{resilience_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{resilience_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_resilience_check_penalized" value="&{template:runequest} {{name=Resilience}} {{very_easy=[[ @{resilience_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{resilience_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Ride</td>
                             <td class="skill_calc">DEX+POW+<input type="text" class="value" name="attr_ride_points" value="0"/>+<input type="text" class="value" name="attr_ride_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_ride_total" value="(@{dex}+@{pow}+@{ride_points}+@{ride_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_ride_check" value="&{template:runequest} {{name=Ride}} {{very_easy=[[@{ride_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{ride_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_ride_check_penalized" value="&{template:runequest} {{name=Ride}} {{very_easy=[[ @{ride_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{ride_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_ride_total" value="(@{hidden_dex}+@{hidden_pow}+@{ride_points}+@{ride_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_ride_check" value="&{template:runequest} {{name=Ride}} {{very_easy=[[@{ride_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{ride_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_ride_check_penalized" value="&{template:runequest} {{name=Ride}} {{very_easy=[[ @{ride_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{ride_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Sing</td>
                             <td class="skill_calc">CHA+POW+<input type="text" class="value" name="attr_sing_points" value="0"/>+<input type="text" class="value" name="attr_sing_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_sing_total" value="(@{cha}+@{pow}+@{sing_points}+@{sing_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_sing_check" value="&{template:runequest} {{name=Sing}} {{very_easy=[[@{sing_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{sing_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_sing_check_penalized" value="&{template:runequest} {{name=Sing}} {{very_easy=[[ @{sing_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{sing_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_sing_total" value="(@{hidden_cha}+@{hidden_pow}+@{sing_points}+@{sing_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_sing_check" value="&{template:runequest} {{name=Sing}} {{very_easy=[[@{sing_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{sing_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_sing_check_penalized" value="&{template:runequest} {{name=Sing}} {{very_easy=[[ @{sing_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{sing_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Sleight</td>
                             <td class="skill_calc">DEX+CHA+<input type="text" class="value" name="attr_sleight_points" value="0"/>+<input type="text" class="value" name="attr_sleight_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_sleight_total" value="(@{dex}+@{cha}+@{sleight_points}+@{sleight_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_sleight_check" value="&{template:runequest} {{name=Sleight}} {{very_easy=[[@{sleight_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{sleight_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_sleight_check_penalized" value="&{template:runequest} {{name=Sleight}} {{very_easy=[[ @{sleight_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{sleight_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_sleight_total" value="(@{hidden_dex}+@{hidden_cha}+@{sleight_points}+@{sleight_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_sleight_check" value="&{template:runequest} {{name=Sleight}} {{very_easy=[[@{sleight_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{sleight_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_sleight_check_penalized" value="&{template:runequest} {{name=Sleight}} {{very_easy=[[ @{sleight_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{sleight_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Stealth</td>
                             <td class="skill_calc">INT+DEX+<input type="text" class="value" name="attr_stealth_points" value="0"/>+<input type="text" class="value" name="attr_stealth_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_stealth_total" value="(@{int}+@{dex}+@{stealth_points}+@{stealth_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_stealth_check" value="&{template:runequest} {{name=Stealth}} {{very_easy=[[@{stealth_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{stealth_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_stealth_check_penalized" value="&{template:runequest} {{name=Stealth}} {{very_easy=[[ @{stealth_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{stealth_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_stealth_total" value="(@{hidden_int}+@{hidden_dex}+@{stealth_points}+@{stealth_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_stealth_check" value="&{template:runequest} {{name=Stealth}} {{very_easy=[[@{stealth_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{stealth_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_stealth_check_penalized" value="&{template:runequest} {{name=Stealth}} {{very_easy=[[ @{stealth_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{stealth_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Swim</td>
                             <td class="skill_calc">STR+CON+<input type="text" class="value" name="attr_swim_points" value="0"/>+<input type="text" class="value" name="attr_swim_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_swim_total" value="(@{str}+@{con}+@{swim_points}+@{swim_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_swim_check" value="&{template:runequest} {{name=Swim}} {{very_easy=[[@{swim_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{swim_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_swim_check_penalized" value="&{template:runequest} {{name=Swim}} {{very_easy=[[ @{swim_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{swim_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_swim_total" value="(@{hidden_str}+@{hidden_con}+@{swim_points}+@{swim_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_swim_check" value="&{template:runequest} {{name=Swim}} {{very_easy=[[@{swim_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{swim_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_swim_check_penalized" value="&{template:runequest} {{name=Swim}} {{very_easy=[[ @{swim_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{swim_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                         <tr>
                             <td class="skill">Unarmed</td>
                             <td class="skill_calc">STR+DEX+<input type="text" class="value" name="attr_unarmed_points" value="0"/>+<input type="text" class="value" name="attr_unarmed_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_unarmed_total" value="(@{str}+@{dex}+@{unarmed_points}+@{unarmed_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_unarmed_check" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[@{unarmed_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{unarmed_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_unarmed_check_penalized" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[ @{unarmed_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{unarmed_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_unarmed_total" value="(@{hidden_str}+@{hidden_dex}+@{unarmed_points}+@{unarmed_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_unarmed_check" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[@{unarmed_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{unarmed_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_unarmed_check_penalized" value="&{template:runequest} {{name=Unarmed}} {{very_easy=[[ @{unarmed_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{unarmed_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                     </table>
                 </div>
@@ -866,46 +833,6 @@
                             <td class="skill_roll"></td>
                         </tr>
                     </table>
-                    <!--<table class="full_fixed">
-                        <tr>
-                            <td class="profskill"><input type="text" class="full" name="attr_profskill1_name"/></td>
-                            <td class="profskill_calc"><input type="text" class="skill_base" name="attr_profskill1_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_profskill1_points" value="0"/>+<input type="text" class="value" name="attr_profskill1_temp" value="0"/></td>
-                            <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_profskill1_total" value="(@{profskill1_base}+@{profskill1_points}+@{profskill1_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_profskill1_check" value="&{template:runequest} {{name=@{profskill1_name}}} {{very_easy=[[@{profskill1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_profskill1_check_penalized" value="&{template:runequest} {{name=@{profskill1_name}}} {{very_easy=[[ @{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
-                        </tr>
-                    </table>
-                    <table class="full_fixed">
-                        <tr>
-                            <td class="profskill"><input type="text" class="full" name="attr_profskill2_name"/></td>
-                            <td class="profskill_calc"><input type="text" class="skill_base" name="attr_profskill2_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_profskill2_points" value="0"/>+<input type="text" class="value" name="attr_profskill2_temp" value="0"/></td>
-                            <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_profskill2_total" value="(@{profskill2_base}+@{profskill2_points}+@{profskill2_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_profskill2_check" value="&{template:runequest} {{name=@{profskill2_name}}} {{very_easy=[[@{profskill2_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill2_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_profskill2_check_penalized" value="&{template:runequest} {{name=@{profskill2_name}}} {{very_easy=[[ @{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill2_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
-                        </tr>
-                    </table>
-                    <table class="full_fixed">
-                        <tr>
-                            <td class="profskill"><input type="text" class="full" name="attr_profskill3_name"/></td>
-                            <td class="profskill_calc"><input type="text" class="skill_base" name="attr_profskill3_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_profskill3_points" value="0"/>+<input type="text" class="value" name="attr_profskill3_temp" value="0"/></td>
-                            <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_profskill3_total" value="(@{profskill3_base}+@{profskill3_points}+@{profskill3_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_profskill3_check" value="&{template:runequest} {{name=@{profskill3_name}}} {{very_easy=[[@{profskill3_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill3_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_profskill3_check_penalized" value="&{template:runequest} {{name=@{profskill3_name}}} {{very_easy=[[ @{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill3_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
-                        </tr>
-                    </table>
-                    <table class="full_fixed">
-                        <tr>
-                            <td class="profskill"><input type="text" class="full" name="attr_profskill4_name"/></td>
-                            <td class="profskill_calc"><input type="text" class="skill_base" name="attr_profskill4_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_profskill4_points" value="0"/>+<input type="text" class="value" name="attr_profskill4_temp" value="0"/></td>
-                            <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_profskill4_total" value="(@{profskill4_base}+@{profskill4_points}+@{profskill4_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_profskill4_check" value="&{template:runequest} {{name=@{profskill4_name}}} {{very_easy=[[@{profskill4_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{profskill4_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_profskill4_check_penalized" value="&{template:runequest} {{name=@{profskill4_name}}} {{very_easy=[[ @{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{profskill4_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
-                        </tr>
-                    </table>-->
                     <fieldset class="repeating_profskills">
                         <table class="full_fixed">
                             <tr>
@@ -913,8 +840,8 @@
                                 <td class="profskill_calc"><input type="text" class="skill_base" name="attr_base" placeholder="@{char1}+@{char2}">+<input type="text" class="value" name="attr_points" value="0"/>+<input type="text" class="value" name="attr_temp" value="0"/></td>
                                 <td class="skill_symbol">=</td>
                                 <td class="skill_total"><input type="number" class="total" name="attr_total" value="(@{base}+@{points}+@{temp})" disabled="true"/></td>
-                                <td class="skill_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{skillname}}} {{very_easy=[[@{total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                    <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{skillname}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                                <td class="skill_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{skillname}}} {{very_easy=[[@{total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                    <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{skillname}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             </tr>
                         </table>
                     </fieldset>
@@ -932,9 +859,9 @@
                             <td class="profskill"><input type="text" class="full" name="attr_language1_name" value="Native Tongue"/></td>
                             <td class="profskill_calc">INT+CHA+<input type="text" class="value" name="attr_language1_points" value="0"/>+<input type="text" class="value" name="attr_language1_temp" value="0"/></td>
                             <td class="skill_symbol">=</td>
-                            <td class="skill_total"><input type="number" class="total" name="attr_language1_total" value="(@{int}+@{cha}+@{language1_points}+@{language1_temp})" disabled="true"/></td>
-                            <td class="skill_roll"><button type='roll' name="roll_language1_check" value="&{template:runequest} {{name=@{language1_name}}} {{very_easy=[[@{language1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{language1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_language1_check_penalized" value="&{template:runequest} {{name=@{language1_name}}} {{very_easy=[[ @{language1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{language1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="skill_total"><input type="number" class="total" name="attr_language1_total" value="(@{hidden_int}+@{hidden_cha}+@{language1_points}+@{language1_temp})" disabled="true"/></td>
+                            <td class="skill_roll"><button type='roll' name="roll_language1_check" value="&{template:runequest} {{name=@{language1_name}}} {{very_easy=[[@{language1_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{language1_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_language1_check_penalized" value="&{template:runequest} {{name=@{language1_name}}} {{very_easy=[[ @{language1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{language1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         </tr>
                     </table>
                     <fieldset class="repeating_languages">
@@ -943,9 +870,9 @@
                                 <td class="profskill"><input type="text" class="full" name="attr_languagename" value="Native Tongue"/></td>
                                 <td class="profskill_calc">INT+CHA+<input type="text" class="value" name="attr_points" value="0"/>+<input type="text" class="value" name="attr_temp" value="0"/></td>
                                 <td class="skill_symbol">=</td>
-                                <td class="skill_total"><input type="number" class="total" name="attr_total" value="(@{int}+@{cha}+@{points}+@{temp})" disabled="true"/></td>
-                                <td class="skill_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{languagename}}} {{very_easy=[[@{total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                    <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{languagename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                                <td class="skill_total"><input type="number" class="total" name="attr_total" value="(@{hidden_int}+@{hidden_cha}+@{points}+@{temp})" disabled="true"/></td>
+                                <td class="skill_roll"><button type='roll' name="roll_check" value="&{template:runequest} {{name=@{languagename}}} {{very_easy=[[@{total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                    <button type='roll' name="roll_check_penalized" value="&{template:runequest} {{name=@{languagename}}} {{very_easy=[[ @{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             </tr>
                         </table>
                     </fieldset>
@@ -1028,6 +955,15 @@
                     <input type="hidden" name="attr_total_weapon_enc" value="0" />
                     <input type="hidden" name="attr_total_item_enc" value="0" />
                     <input type="hidden" name="attr_total_armor_enc" value="0" />
+                    <input type="hidden" name="attr_hidden_enc_total" value="0" />
+                    <input type="hidden" name="attr_hidden_enc_overloaded" value="0" />
+
+                    <input type="hidden" name="attr_hidden_enc_skill_mod" value="0" />
+                    <input type="hidden" name="attr_hidden_enc_fatigue_mod" value="0" />
+                    <input type="hidden" name="attr_hidden_enc_move_rate_mod" value="0" />
+                    <input type="hidden" name="attr_hidden_enc_skill_mod1" value="Standard" />
+                    <input type="hidden" name="attr_hidden_enc_fatigue_mod1" value="Standard" />
+                    <input type="hidden" name="attr_hidden_enc_move_rate_mod1" value="Standard" />
                     <table class="full">
                         <tr>
                             <td style="white-space: nowrap"><h3>Load</h3></td>
@@ -1039,37 +975,22 @@
                             <td class="load_label"><h5>Overloaded</h5></td>
                         </tr>
                         <tr>
-                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_total" value="0" readonly="true"/></td>
-                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_overloaded" value="0" readonly="true"/></td>
+                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_total" value="@{hidden_enc_total}" disabled/></td>
+                            <td class="load_value"><input type="number" class="value_full" name="attr_enc_overloaded" value="@{hidden_enc_overloaded}" disabled/></td>
                         </tr>
                     </table>
                     <table class="full">
                         <tr>
                             <td><h5>Str & Dex Skills:</h5></td>
-                            <td>
-                                <select class="full" name="attr_enc_skill_mod">
-                                    <option value="-0">Standard</option>
-                                    <option value="-20">-20%</option>
-                                </select>
-                            </td>
+                            <td><input class="full" type="text" name="attr_enc_skill_mod" value="@{hidden_enc_skill_mod1}" disabled/></td>
                         </tr>
                         <tr>
                             <td><h5>Fatigue Tests:</h5></td>
-                            <td>
-                                <select class="full" name="attr_enc_fatigue_mod">
-                                    <option value="-0">Normal</option>
-                                    <option value="-20">-20%</option>
-                                </select>
-                            </td>
+                            <td><input class="full" type="text" name="attr_enc_fatigue_mod" value="@{hidden_enc_fatigue_mod1}" disabled/></td>
                         </tr>
                         <tr>
                             <td><h5>Movement Rate:</h5></td>
-                            <td>
-                                <select class="full" name="attr_enc_move_rate_mod">
-                                    <option value="-0">Standard</option>
-                                    <option value="*.5">Halved</option>
-                                </select>
-                            </td>
+                            <td><input class="full" type="text" name="attr_move_rate_mod" value="@{hidden_enc_move_rate_mod1}" disabled/></td>
                         </tr>
 
                     </table>
@@ -1097,10 +1018,10 @@
                                     <select class="full" name="attr_devotionspirit_limit">
                                         <option disabled="true">--Divine Cult--</option>
                                         <option value="0">Lay Member</option>
-                                        <option value="ceil(@{pow}*.25)">Initiate</option>
-                                        <option value="ceil(@{pow}*.5)">Acolyte</option>
-                                        <option value="ceil(@{pow}*.75)">Priest</option>
-                                        <option value="@{pow}">High Priest</option>
+                                        <option value="ceil(@{hidden_pow}*.25)">Initiate</option>
+                                        <option value="ceil(@{hidden_pow}*.5)">Acolyte</option>
+                                        <option value="ceil(@{hidden_pow}*.75)">Priest</option>
+                                        <option value="@{hidden_pow}">High Priest</option>
                                         <option disabled="true">--Sorcery Order--</option>
                                         <option value="0">Novice</option>
                                         <option value="0">Apprentice</option>
@@ -1204,9 +1125,9 @@
                     <tr>
                         <td>POW+CHA+<input type="text" class="value" name="attr_common_magic_points" value="0"/>+<input type="text" class="value" name="attr_common_magic_temp" value="0"/></td>
                         <td>=</td>
-                        <td><input type="number" class="total" name="attr_common_magic_total" value="(@{pow}+@{cha}+@{common_magic_points}+@{common_magic_temp})" disabled="true"/></td>
-                        <td><button type='roll' name="roll_common_magic_check" value="&{template:runequest} {{name=Common Magic}} {{very_easy=[[@{common_magic_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{common_magic_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_common_magic_check_penalized" value="&{template:runequest} {{name=Common Magic}} {{very_easy=[[ @{common_magic_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{common_magic_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td><input type="number" class="total" name="attr_common_magic_total" value="(@{hidden_pow}+@{hidden_cha}+@{common_magic_points}+@{common_magic_temp})" disabled="true"/></td>
+                        <td><button type='roll' name="roll_common_magic_check" value="&{template:runequest} {{name=Common Magic}} {{very_easy=[[@{common_magic_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{common_magic_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                            <button type='roll' name="roll_common_magic_check_penalized" value="&{template:runequest} {{name=Common Magic}} {{very_easy=[[ @{common_magic_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{common_magic_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                     </tr>
                 </table>
                 <h4>Spells Known</h4>
@@ -1230,9 +1151,9 @@
                         <td><h4>Manipulation&nbsp;</h4></td>
                         <td>INT+POW+<input type="text" class="value" name="attr_shaping_points" value="0"/>+<input type="text" class="value" name="attr_shaping_temp" value="0"/></td>
                         <td>=</td>
-                        <td><input type="number" class="total" name="attr_shaping_total" value="(@{int}+@{pow}+@{shaping_points}+@{shaping_temp})" disabled="true"/></td>
+                        <td><input type="number" class="total" name="attr_shaping_total" value="(@{hidden_int}+@{hidden_pow}+@{shaping_points}+@{shaping_temp})" disabled="true"/></td>
                         <td><input type="number" class="value_full" name="attr_shaping_effect_points" value="ceil(@{shaping_total}/10)" disabled="true"/></td>
-                        <td><input type="number" class="value_full" name="attr_memorized_sorcery_spells_max" value="@{int}" disabled="true"/></td>
+                        <td><input type="number" class="value_full" name="attr_memorized_sorcery_spells_max" value="@{hidden_int}" disabled="true"/></td>
                     </tr>
                 </table>
                 <span style="display:block;margin-bottom: 1%;"></span>
@@ -1252,9 +1173,9 @@
                         <td class="sorcery_label"><input type="text" class="full" name="attr_invocation1_name" /></td>
                         <td class="sorcery_calc">INTx2+<input type="text" class="value" name="attr_invocation1_points" value="0"/>+<input type="text" class="value" name="attr_invocation1_temp" value="0"/></td>
                         <td class="sorcery_symbol">=</td>
-                        <td class="sorcery_total"><input type="number" class="total" name="attr_invocation1_total" value="(@{int}+@{int}+@{invocation1_points}+@{invocation1_temp})" disabled="true"/></td>
-                        <td class="sorcery_roll"><button type='roll' name="roll_invocation1_check" value="&{template:runequest} {{name=@{invocation1_name}}} {{very_easy=[[@{invocation1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{invocation1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_invocation1_check_penalized" value="&{template:runequest} {{name=@{invocation1_name}}} {{very_easy=[[ @{invocation1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{invocation1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td class="sorcery_total"><input type="number" class="total" name="attr_invocation1_total" value="(@{hidden_int}+@{hidden_int}+@{invocation1_points}+@{invocation1_temp})" disabled="true"/></td>
+                        <td class="sorcery_roll"><button type='roll' name="roll_invocation1_check" value="&{template:runequest} {{name=@{invocation1_name}}} {{very_easy=[[@{invocation1_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{invocation1_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                            <button type='roll' name="roll_invocation1_check_penalized" value="&{template:runequest} {{name=@{invocation1_name}}} {{very_easy=[[ @{invocation1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{invocation1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="sorcery_intensity"><input type="number" class="value_full" name="attr_invocation1_intensity1_max" value="ceil(@{invocation1_total}/10)" disabled="true"/></td>
                         <td class="sorcery_spells"><input type="text" class="full" name="attr_invocation1_spells" /></td>
                     </tr>
@@ -1265,9 +1186,9 @@
                             <td class="sorcery_label"><input type="text" class="full" name="attr_invocation_name" /></td>
                             <td class="sorcery_calc">INTx2+<input type="text" class="value" name="attr_invocation_points" value="0"/>+<input type="text" class="value" name="attr_invocation_temp" value="0"/></td>
                             <td class="sorcery_symbol">=</td>
-                            <td class="sorcery_total"><input type="number" class="total" name="attr_invocation_total" value="(@{int}+@{int}+@{invocation_points}+@{invocation_temp})" disabled="true"/></td>
-                            <td class="sorcery_roll"><button type='roll' name="roll_invocation_check" value="&{template:runequest} {{name=@{invocation_name}}} {{very_easy=[[@{invocation_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{invocation_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_invocation_check_penalized" value="&{template:runequest} {{name=@{invocation_name}}} {{very_easy=[[ @{invocation_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{invocation_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="sorcery_total"><input type="number" class="total" name="attr_invocation_total" value="(@{hidden_int}+@{hidden_int}+@{invocation_points}+@{invocation_temp})" disabled="true"/></td>
+                            <td class="sorcery_roll"><button type='roll' name="roll_invocation_check" value="&{template:runequest} {{name=@{invocation_name}}} {{very_easy=[[@{invocation_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{invocation_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_invocation_check_penalized" value="&{template:runequest} {{name=@{invocation_name}}} {{very_easy=[[ @{invocation_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{invocation_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             <td class="sorcery_intensity"><input type="number" class="value_full" name="attr_intensity_max" value="ceil(@{invocation_total}/10)" disabled="true"/></td>
                             <td class="sorcery_spells"><input type="text" class="full" name="attr_spells" /></td>
                         </tr>
@@ -1300,9 +1221,9 @@
                         <td class="divine_magic_label"><input type="text" class="full" name="attr_devotion1_name" /></td>
                         <td class="divine_magic_calc">CHA+Devoted POW+<input type="text" class="value" name="attr_devotion1_points" value="0"/>+<input type="text" class="value" name="attr_devotion1_temp" value="0"/></td>
                         <td class="divine_magic_symbol">=</td>
-                        <td class="divine_magic_total"><input type="number" class="total" name="attr_devotion1_total" value="(@{devotion1_poolmax}+@{cha}+@{devotion1_points}+@{devotion1_temp})" disabled="true"/></td>
-                        <td class="divine_magic_roll"><button type='roll' name="roll_devotion1_check" value="&{template:runequest} {{name=@{devotion1_name}}} {{very_easy=[[@{devotion1_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{devotion1_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                            <button type='roll' name="roll_devotion1_check_penalized" value="&{template:runequest} {{name=@{devotion1_name}}} {{very_easy=[[ @{devotion1_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{devotion1_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                        <td class="divine_magic_total"><input type="number" class="total" name="attr_devotion1_total" value="(@{devotion1_poolmax}+@{hidden_cha}+@{devotion1_points}+@{devotion1_temp})" disabled="true"/></td>
+                        <td class="divine_magic_roll"><button type='roll' name="roll_devotion1_check" value="&{template:runequest} {{name=@{devotion1_name}}} {{very_easy=[[@{devotion1_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{devotion1_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                            <button type='roll' name="roll_devotion1_check_penalized" value="&{template:runequest} {{name=@{devotion1_name}}} {{very_easy=[[ @{devotion1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{devotion1_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                         <td class="divine_magic_intensity"><input type="number" class="value_full" name="attr_devotion1_intensity" value="ceil(@{devotion1_total}/10)" disabled="true"/></td>
                         <td class="divine_magic_magnitude"><input type="number" class="value_full" name="attr_devotion1_magnitude" value="ceil(@{devotion1_total}/10)" disabled="true"/></td>
                         <td class="divine_magic_pool_value"><input type="text" class="value_full" name="attr_devotion1_devotional_pool" /></td>
@@ -1316,9 +1237,9 @@
                             <td class="divine_magic_label"><input type="text" class="full" name="attr_devotion_name" /></td>
                             <td class="divine_magic_calc">CHA+Devoted POW+<input type="text" class="value" name="attr_devotion_points" value="0"/>+<input type="text" class="value" name="attr_devotion_temp" value="0"/></td>
                             <td class="divine_magic_symbol">=</td>
-                            <td class="divine_magic_total"><input type="number" class="total" name="attr_devotion_total" value="(@{devotional_poolmax}+@{cha}+@{devotion_points}+@{devotion_temp})" disabled="true"/></td>
-                            <td class="divine_magic_roll"><button type='roll' name="roll_devotion_check" value="&{template:runequest} {{name=@{devotion_name}}} {{very_easy=[[@{devotion_total}+@{fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{devotion_total}+@{fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
-                                <button type='roll' name="roll_devotion_check_penalized" value="&{template:runequest} {{name=@{devotion_name}}} {{very_easy=[[ @{devotion_total}+?{Penalty|0}+@{fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{devotion_total}+?{Penalty|0}+@{fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
+                            <td class="divine_magic_total"><input type="number" class="total" name="attr_devotion_total" value="(@{devotional_poolmax}+@{hidden_cha}+@{devotion_points}+@{devotion_temp})" disabled="true"/></td>
+                            <td class="divine_magic_roll"><button type='roll' name="roll_devotion_check" value="&{template:runequest} {{name=@{devotion_name}}} {{very_easy=[[@{devotion_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{devotion_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
+                                <button type='roll' name="roll_devotion_check_penalized" value="&{template:runequest} {{name=@{devotion_name}}} {{very_easy=[[ @{devotion_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{devotion_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                             <td class="divine_magic_intensity"><input type="number" class="value_full" name="attr_intensity" value="ceil(@{devotion_total}/10)" disabled="true"/></td>
                             <td class="divine_magic_magnitude"><input type="number" class="value_full" name="attr_magnitude" value="ceil(@{devotion_total}/10)" disabled="true"/></td>
                             <td class="divine_magic_pool_value"><input type="text" class="value_full" name="attr_devotional_pool" /></td>
@@ -1460,7 +1381,7 @@
 
     on('sheet:opened change:str_std change:str_temp', function() {
         getAttrs(["str_std", "str_temp"], function(values) {
-            let std = parseInt(values.str_std)||1000;
+            let std = parseInt(values.str_std)||0;
             let temp = parseInt(values.str_temp)||0;
             let tot = std+temp;
             setAttrs({
@@ -1541,20 +1462,20 @@
             let siz = parseInt(values.hidden_siz)||0;
             let tot = str+siz;
             setAttrs({
-                "enc_overloaded": tot
+                "hidden_enc_overloaded": tot
             });
         });
     });
 
-    on('change:repeating_weapons remove:repeating_weapons', function() {
+    on('sheet:opened change:repeating_weapons remove:repeating_weapons', function() {
 	    repeatingSum("total_weapon_enc","weapons","weapon_enc");
     });
 
-    on('change:repeating_items remove:repeating_items', function() {
+    on('sheet:opened change:repeating_items remove:repeating_items', function() {
 	    repeatingSum("total_item_enc","items",["item_enc","item_qnty"]);
     });
 
-    on('change:hitloc1_enc change:hitloc2_enc change:hitloc3_enc change:hitloc4_enc change:hitloc5_enc change:hitloc6_enc change:hitloc7_enc', function() {
+    on('sheet:opened change:hitloc1_enc change:hitloc2_enc change:hitloc3_enc change:hitloc4_enc change:hitloc5_enc change:hitloc6_enc change:hitloc7_enc', function() {
 	    getAttrs(["hitloc1_enc", "hitloc2_enc", "hitloc3_enc", "hitloc4_enc", "hitloc5_enc", "hitloc6_enc", "hitloc7_enc"], function(values) {
             let loc1 = parseInt(values.hitloc1_enc)||0;
             let loc2 = parseInt(values.hitloc2_enc)||0;
@@ -1570,91 +1491,129 @@
 	    });
     });
 
-    on('change:total_weapon_enc change:total_item_enc change:total_armor_enc', function() {
+    on('sheet:opened change:total_weapon_enc change:total_item_enc change:total_armor_enc', function() {
         getAttrs(["total_weapon_enc", "total_item_enc", "total_armor_enc"], function(values) {
             let weapon = parseInt(values.total_weapon_enc)||0;
             let item = parseInt(values.total_item_enc)||0;
             let armor = parseInt(values.total_armor_enc)||0;
             let tot = weapon+item+armor;
             setAttrs({
-                "enc_total": tot
+                "hidden_enc_total": tot
             });
         });
     });
 
-    on('change:enc_total', function() {
-	    getAttrs(["enc_total", "enc_overloaded"], function(values) {
-            let total = parseInt(values.enc_total)||0;
-            let overloaded = parseInt(values.enc_overloaded)||0;
+    on('sheet:opened change:hidden_enc_total change:hidden_enc_overloaded', function() {
+	    getAttrs(["hidden_enc_total", "hidden_enc_overloaded"], function(values) {
+            let total = parseInt(values.hidden_enc_total)||0;
+            let overloaded = parseInt(values.hidden_enc_overloaded)||0;
             if (total >= overloaded) {
                 setAttrs({
-                    "enc_skill_mod": "-20",
-                    "enc_fatigue_mod": "-20",
-                    "enc_move_rate_mod": "*.5",
+                    "hidden_enc_skill_mod": "-20",
+                    "hidden_enc_fatigue_mod": "-20",
+                    "hidden_enc_move_rate_mod": "*.5",
+                    "hidden_enc_skill_mod1": "-20%",
+                    "hidden_enc_fatigue_mod1": "-20%",
+                    "hidden_enc_move_rate_mod1": "Halved"
                 });
             }
             else {
                 setAttrs({
-                    "enc_skill_mod": "-0",
-                    "enc_fatigue_mod": "-0",
-                    "enc_move_rate_mod": "-0",
+                    "hidden_enc_skill_mod": "-0",
+                    "hidden_enc_fatigue_mod": "-0",
+                    "hidden_enc_move_rate_mod": "-0",
+                    "hidden_enc_skill_mod1": "Standard",
+                    "hidden_enc_fatigue_mod1": "Standard",
+                    "hidden_enc_move_rate_mod1": "Standard"
                 });
             }
         });
     });
 
-    on("change:fatigue", function() {
+    on("sheet_opened change:fatigue", function() {
         getAttrs(["fatigue"], function(values) {
             let fatigue = values.fatigue;
-            let skillgrade = 0;
-            let movement = "";
-            let strike_rank = "";
-            let action_points = 0;
+            let skillgrade = "0";
+            let movement = "0";
+            let strike_rank = "0";
+            let action_points = "0";
+            let skillgrade1 = "0";
+            let movement1 = "0";
+            let strike_rank1 = "0";
+            let action_points1 = "0";
             switch(fatigue) {
                 case "Fresh":
-                    skillgrade = 0;
+                    skillgrade = "-0";
                     movement = "+0";
                     strike_rank = "0";
-                    action_points = 0;
+                    action_points = "0";
+                    skillgrade1 = "Standard";
+                    movement1 = "No Penalties";
+                    strike_rank1 = "No Penalties";
+                    action_points1 = "No Penalties";
                     break;
                 case "Winded":
-                    skillgrade = -10;
+                    skillgrade = "-10";
                     movement = "+0";
                     strike_rank = "0";
-                    action_points = 0;
+                    action_points = "0";
+                    skillgrade1 = "-10%";
+                    movement1 = "No Penalties";
+                    strike_rank1 = "No Penalties";
+                    action_points1 = "No Penalties";
                     break;
                 case "Tired":
-                    skillgrade = -20;
+                    skillgrade = "-20";
                     movement = "-1";
                     strike_rank = "0";
-                    action_points = 0;
+                    action_points = "0";
+                    skillgrade1 = "-20%";
+                    movement1 = "-1 metres";
+                    strike_rank1 = "No Penalties";
+                    action_points1 = "No Penalties";
                     break;
                 case "Wearied":
-                    skillgrade = -30;
+                    skillgrade = "-30";
                     movement = "-1";
                     strike_rank = "-2";
-                    action_points = 0;
+                    action_points = "0";
+                    skillgrade1 = "-30%";
+                    movement1 = "-1 metres";
+                    strike_rank1 = "-2";
+                    action_points1 = "No Penalties";
                     break;
                 case "Exhausted":
-                    skillgrade = -40;
+                    skillgrade = "-40";
                     movement = "*.5";
                     strike_rank = "-4";
-                    action_points = -5;
+                    action_points = "-5";
+                    skillgrade1 = "-40%";
+                    movement1 = "Halved";
+                    strike_rank1 = "-4";
+                    action_points1 = "-5 Combat Art DEX";
                     break;
                 case "Debilitated":
-                    skillgrade = -50;
+                    skillgrade = "-50";
                     movement = "*.5";
                     strike_rank = "-6";
-                    action_points = -10;
+                    action_points = "-10";
+                    skillgrade1 = "-50%";
+                    movement1 = "Halved";
+                    strike_rank1 = "-6";
+                    action_points1 = "-10 Combat Art DEX";
                     break;
             }
 
             setAttrs({
-                "fatigue_skillgrade": skillgrade,
-                "fatigue_movement": movement,
-                "fatigue_strike_rank": strike_rank,
-                "fatigue_action_points": action_points
-            })
+                "hidden_fatigue_skillgrade": skillgrade,
+                "hidden_fatigue_movement": movement,
+                "hidden_fatigue_strike_rank": strike_rank,
+                "hidden_fatigue_action_points": action_points,
+                "hidden_fatigue_skillgrade1": skillgrade1,
+                "hidden_fatigue_movement1": movement1,
+                "hidden_fatigue_strike_rank1": strike_rank1,
+                "hidden_fatigue_action_points1": action_points1
+            });
 
         });
     });
