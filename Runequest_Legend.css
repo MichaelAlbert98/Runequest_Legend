@@ -62,7 +62,7 @@ div.sheet-column-1n2of3 {
     margin-right: 0.5%;
     margin-bottom: 1%;
     float: left;
-    width: 66.333333%;
+    width: 66%;
 }
 div.sheet-column-2of3 {
     margin-left: 0.5%;
@@ -81,7 +81,7 @@ div.sheet-column-3of3 {
     margin-left: 0.5%;
     margin-bottom: 1%;
     float: left;
-    width: 32.666666%;
+    width: 33%;
 }
 
 /* Generic CSS */
@@ -95,6 +95,11 @@ table.sheet-full {
 table.sheet-full_fixed {
     width: 100%;
     table-layout: fixed;
+}
+table.sheet-header {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
 }
 tr.sheet-head {
     text-align: center;
@@ -158,7 +163,7 @@ td.sheet-info-label {
     white-space: nowrap;
 }
 input.sheet-info-number {
-    width: 50px;
+    width: 40px;
     text-align: center;
 }
 
