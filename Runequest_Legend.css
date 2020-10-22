@@ -171,7 +171,7 @@ input.sheet-info-number {
 input.sheet-tab {
     position: relative;
     z-index: 9999;
-    cursor: pointer;    
+    cursor: pointer;
     opacity: 0;
     width: 19.5%;
     margin-bottom: 2px;
@@ -182,9 +182,9 @@ span.sheet-tab {
     width: 19.5%;
     text-align: center;
     background: #231f20;
-  color: #dad8d9;
+    color: #dad8d9;
     font-weight: bold;
-  border-radius: 4px;
+    border-radius: 4px;
     cursor: pointer;
     margin-left: -19.5%;
 }
@@ -664,6 +664,8 @@ td.sheet-effect_mp_cost {
   line-height: 1.5em;
 }
 .sheet-rolltemplate-runequest td {
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
   padding: 2px;
   border-bottom: 1px solid black;
 }
@@ -673,20 +675,20 @@ td.sheet-effect_mp_cost {
 .sheet-rolltemplate-runequest .inlinerollresult  {
   display: inline-block;
   text-align: center;
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest .inlinerollresult.fullcrit {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest .inlinerollresult.fullfail {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest .inlinerollresult.importantroll {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 
 .sheet-rolltemplate-runequest-weapon table {
@@ -705,6 +707,8 @@ td.sheet-effect_mp_cost {
   line-height: 1.5em;
 }
 .sheet-rolltemplate-runequest-weapon td {
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
   padding: 2px;
   border-bottom: 1px solid black;
 }
@@ -714,20 +718,20 @@ td.sheet-effect_mp_cost {
 .sheet-rolltemplate-runequest-weapon .inlinerollresult  {
   display: inline-block;
   text-align: center;
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-weapon .inlinerollresult.fullcrit {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-weapon .inlinerollresult.fullfail {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-weapon .inlinerollresult.importantroll {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-init table {
   width: 100%;
@@ -745,6 +749,8 @@ td.sheet-effect_mp_cost {
   line-height: 1.5em;
 }
 .sheet-rolltemplate-runequest-init td {
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
+  color: #dad8d9;
   padding: 2px;
   border-bottom: 1px solid black;
 }
@@ -754,18 +760,18 @@ td.sheet-effect_mp_cost {
 .sheet-rolltemplate-runequest-init .inlinerollresult  {
   display: inline-block;
   text-align: center;
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-init .inlinerollresult.fullcrit {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-init .inlinerollresult.fullfail {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
 .sheet-rolltemplate-runequest-init .inlinerollresult.importantroll {
-  border: 1px solid black;
-  background: #BEBEBE;
+  border: 0px solid black;
+  background: url(https://raw.githubusercontent.com/MichaelAlbert98/roll20-character-sheets/Runequest_Legend/Runequest_Legend/Roll_background.png);
 }
