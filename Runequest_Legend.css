@@ -453,6 +453,10 @@ textarea.sheet-notes {
     width: 96%;
     height: 425px;
 }
+textarea.sheet-notes2 {
+    width: 98%;
+    height: 300px;
+}
 
 /* common Magic */
 textarea.sheet-common_magic_spells {
