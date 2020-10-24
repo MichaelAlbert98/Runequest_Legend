@@ -366,6 +366,7 @@
                             <td><input type="number" class="total" name="attr_experience_mod" value="(@{experience_mod_std}+@{experience_mod_temp})" disabled/></td>
                         </tr>
                         <tr>
+                            <input type="hidden" name="attr_hidden_healing_rate" value="0" />
                             <td class="attribute-label">Healing Rate: </td>
                             <td></td>
                             <td></td>
@@ -373,16 +374,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>
-                                <select class="full" name="attr_healing_rate">
-                                    <option value="72">72</option>
-                                    <option value="48">48</option>
-                                    <option value="36">36</option>
-                                    <option value="24">24</option>
-                                    <option value="24">18</option>
-                                    <option value="24">12</option>
-                                </select>
-                            </td>
+                            <td><input type="number" class="total" name="attr_healing_rate" value="@{hidden_healing_rate}" disabled/></td>
                         </tr>
                     </table>
                     <table class="full">
@@ -1420,6 +1412,41 @@
             }
         });
     });
+
+    on("sheet_opened change:hidden_con change:resilience_points change:resilience_temp", function() {
+        getAttrs(["hidden_con", "resilience_points", "resilience_temp"], function(values) {
+            let con = parseInt(values.hidden_con)||0;
+            let points = parseInt(values.resilience_points)||0;
+            let temp = parseInt(values.resilience_temp)||0;
+            let resilience = con + con + points + temp;
+            let healing_rate = "0";
+
+            if (resilience >= "91") {
+                healing_rate = "12";
+            }
+            else if (resilience >= "71") {
+                healing_rate = "18";
+            }
+            else if (resilience >= "51") {
+                healing_rate = "24";
+            }
+            else if (resilience >= "31") {
+                healing_rate = "36";
+            }
+            else if (resilience >= "11") {
+                healing_rate = "48";
+            }
+            else {
+                healing_rate = "72";
+            }
+
+            setAttrs({
+                "hidden_healing_rate": healing_rate
+            });
+
+        });
+    });
+
     on("sheet_opened change:living_standard_name", function() {
         getAttrs(["living_standard_name"], function(values) {
             let name = values.living_standard_name;
