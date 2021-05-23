@@ -675,7 +675,7 @@
                           <td class="skill_calc">INTx2+<input type="text" class="value" name="attr_lore_(regional)_points" value="0"/>+<input type="text" class="value" name="attr_lore_(regional)_temp" value="0"/></td>
                           <td class="skill_symbol">=</td>
                           <td class="skill_total"><input type="number" class="total" name="attr_lore_(regional)_total" value="(@{hidden_int}+@{hidden_int}+@{lore_(regional)_points}+@{lore_(regional)_temp})" disabled="true"/></td>
-                          <td class="skill_roll"><button type='roll' name="roll_lore_(regional)_check" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[@{lore_(regional)_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{lore_(regional)_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}}">
+                          <td class="skill_roll"><button type='roll' name="roll_lore_(regional)_check" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[@{lore_(regional)_total}+@{hidden_fatigue_skillgrade}]]}} {{very_easy_crit=[[ceil((@{lore_(regional)_total}+@{hidden_fatigue_skillgrade})*.1)]]}}  {{rolled=[[ 1d100 ]]}}">
                           <button type='roll' name="roll_lore_(regional)_check_penalized" value="&{template:runequest} {{name=Lore (Regional)}} {{very_easy=[[ @{lore_(regional)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade} ]]}} {{very_easy_crit=[[ ceil( (@{lore_(regional)_total}+?{Penalty|0}+@{hidden_fatigue_skillgrade})*.1 ) ]]}}  {{rolled=[[ 1d100 ]]}}">+?</td>
                       </tr>
                       <tr>
