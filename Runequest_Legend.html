@@ -564,7 +564,7 @@
                   <table class="full_fixed">
                       <tr>
                           <td class="weapon"><input class="full" type="text" name="attr_weapon_name"/></td>
-                          <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon_damage"/><select name="attr_weapon_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon_damage_check" value="&{template:runequest-weapon} {{name=@{weapon_name}}} {{damage=[[@{weapon_damage}+@{weapon_db}]]}} {{size/reach=@{weapon_size}/@{weapon_reach}}} {{manoeuvres=@{weapon_manoeuvres}}}"></td>
+                          <td class="weapon_damage"><input class="damage" type="text" name="attr_weapon_damage"/><select name="attr_weapon_db" class="db"><option value="0" selected>+0</option><option value="@{damage_mod}">+db</option></select><button type="roll" name="roll_weapon_damage_check" value="&{template:runequest-weapon} {{name=@{weapon_name}}} {{damage=[[@{weapon_damage}+@{weapon_db}]]}} {{location=[[1d20]]}} {{size/reach=@{weapon_size}/@{weapon_reach}}} {{manoeuvres=@{weapon_manoeuvres}}}"></td>
                           <td class="weapon_size"><input class="value_full" type="text" name="attr_weapon_size"/></td>
                           <td class="weapon_reach"><input class="value_full" type="text" name="attr_weapon_reach"/></td>
                           <td class="weapon_enc"><input class="value_full" type="number" name="attr_weapon_enc" value="0"/></td>
@@ -1220,11 +1220,14 @@
     <table>
         <caption>{{name}}</caption>
         <tr style="background:#DFF0D8;"><td class="template_label">Damage:</td><td class="template_value">{{damage}}</td></tr>
+        {{#location}}
+        <tr style="background:#DFF0D8;"><td class="template_label">Location:</td><td class="template_value">{{location}}</td></tr>
+        {{/location}}
         {{#size/reach}}
-            <tr style="background:#DFF0D8;"><td class="template_label">Size/Reach:</td><td class="template_value">{{size/reach}}</td></tr>
+        <tr style="background:#DFF0D8;"><td class="template_label">Size/Reach:</td><td class="template_value">{{size/reach}}</td></tr>
         {{/size/reach}}
         {{#manoeuvres}}
-            <tr style="background:#DFF0D8;"><td class="template_label">Manoeuvres:</td></td><td class="template_value">{{manoeuvres}}</td></tr>
+        <tr style="background:#DFF0D8;"><td class="template_label">Manoeuvres:</td></td><td class="template_value">{{manoeuvres}}</td></tr>
         {{/manoeuvres}}
     </table>
 </rolltemplate>
